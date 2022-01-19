@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Алиса Щурова](https://up.htmlacademy.ru/htmlcss/33/user/1946373).
-* Наставник: `Arthur Litovko`.
+* Наставник: `[Arthur Litovko](https://github.com/baileys-li)`.
 
 ---
 
