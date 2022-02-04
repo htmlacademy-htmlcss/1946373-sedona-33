@@ -3,10 +3,8 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-
-  src: url("fonts/pt-sans-regular.woff2") format("woff2");
-  
-  font-display: swap;
+    src: url("fonts/pt-sans-regular.woff2") format("woff2");
+    font-display: swap;
   
   }
 
@@ -229,6 +227,8 @@
 }
 
 /*Каталог*/
+
+
 .inner-header {
     color: #ffffff;
     background-image: url("../images/catalog-background.jpg")  ; 
@@ -236,7 +236,7 @@
     height: 408px;
 }
 
-.inner-header-title {
+.title-header {
     font-size: 60px;
     line-height: 78px;
     font-weight: bold;
@@ -259,6 +259,9 @@
     font-style: normal;
 
 }
+
+/*стоимость*/
+fieldset.cost
 
 .product-card-title{ 
 font-weight: bold;
