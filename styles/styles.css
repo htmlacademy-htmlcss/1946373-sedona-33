@@ -3,7 +3,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/pt-sans-regular.woff2") format("woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
   
   }
@@ -12,7 +12,7 @@
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/pt-sans-bold.woff2") format("woff2");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
   }
 
@@ -39,7 +39,7 @@
   display:inline-block; /*не работает в одну линию*/
   }
 
-  .seach {
+  .search {
     background-image: url("../images/search.svg");
     background-repeat: no-repeat;
   }
@@ -166,7 +166,7 @@
     text-align: center;
 
 }
-.seach{
+.search-interesting{
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
@@ -194,6 +194,7 @@
     text-align: center;
     color: #FFFFFF;
     background-repeat: no-repeat;
+    background-color: #756257;
     
 }
 .subscribe {
@@ -226,14 +227,19 @@
     text-transform: uppercase;
 }
 
+.subscribtion-field {
+    font-family: "PT Sans", sans-serif;
+}
+
 /*Каталог*/
 
 
 .inner-header {
     color: #ffffff;
     background-image: url("../images/catalog-background.jpg")  ; 
-    width: 1200px;
-    height: 408px;
+    background-color:#333333; 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .title-header {
@@ -249,8 +255,8 @@
 
 .found-hotels{
     font-size: 30px;
- line-height: 39px;
- text-transform: uppercase;
+    line-height: 39px;
+    text-transform: uppercase;
 }
 
 .cheap {
@@ -260,8 +266,9 @@
 
 }
 
-/*стоимость*/
-fieldset.cost
+
+/*стоимость
+fieldset.cost*/
 
 .product-card-title{ 
 font-weight: bold;
@@ -289,7 +296,6 @@ line-height: 31px;
     border-radius: 4px;
     font-size: 16px;
     line-height: 21px;
-    position: absolute;
     color: #FFFFFF;
 }
 
@@ -298,7 +304,6 @@ line-height: 31px;
     border-radius: 4px;
     font-size: 16px;
     line-height: 21px;
-    position: absolute;
     color: #FFFFFF;
 }
 
