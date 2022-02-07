@@ -9,9 +9,10 @@
 </head>
 
 <body>
+  <div class="site-container"> <!--для тени-->
   <header class="page-header">
     <nav class="navigation">
-      <a>
+      <a class="navigation-logo" href="index.html">
         <img class="logo" src="images/logo.svg" width="139" height="66" alt="Логотип Седоны">
       </a>
       <ul class="navigation-list">
@@ -25,17 +26,15 @@
           <a class="navigation-link" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
-      <ul class="navigation-list">
+      <ul class="navigation-user">
         <li class="navigation-item">
-          <a class="navigation-link" href="#">
-            <div class="seach"> <span class="visually-hidden"> </span>Поиск</div>
-            </span>
-          </a>
+           <a class="navigation-link" href="#">
+            <div class="search"> <span class="visually-hidden"> </span>Поиск</div>
+           </a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">
             <div class="favorite"> <span class="visually-hidden"> </span>Отложенные</div>
-
           </a>
         </li>
         <li class="navigation-item">
@@ -45,14 +44,15 @@
     </nav>
   </header>
 
-  <main class="index">
-    <h1 class="visually-hidden" Седона></h1>
+  <main class="main-container index">
+    <div class="page-container">
+    <h1 class="visually-hidden" >Седона</h1>
     <div class="logotype"><img class="logo" src="images/welcometosedona.svg" width="458" height="352"
         alt="Фото Седона»"></div>
     <section class="advantages">
-      <strong>Седона-небольшой городок в Аризоне, <br> заслуживающий большего!</strong>
+      <div class="slogan"><strong >Седона-небольшой городок в Аризоне, <br> заслуживающий большего!</strong></div>
       <p class="first-screen-description"> Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-      <h2 class="visually-hidden" Преимущества></h2>
+      <h2 class="visually-hidden">Преимущества</h2>
     </section>
 
     <section class="advantage">
@@ -61,9 +61,9 @@
           <div class="real-town">
             <h3 class="other-resons">Настоящий городок</h3>
             <p class="explanation-color-white">Седона — не аттракцион <br> для туристов, там течёт <br>
-              своя жизнь</p>
-          </div>
-          <img class="logo" src="images/reallytown.jpg" width="800" height="384" alt="Настоящий городок">
+              своя жизнь</p></div>
+            <img class="town" src="images/reallytown.jpg" width="800" height="384" alt="Настоящий городок">
+         
           <ul>
             <li class="advantage-item-home">
               <div class="blue-color">
@@ -116,10 +116,10 @@
         </li>
       </ol>
     </section>
-  </main>
+   
 
   <section class="seach-hotel">
-    <h2 class="seach"> Заинтересовались? </h2>
+    <h2 class="search-interesting"> Заинтересовались? </h2>
     <p class="choose-days">Укажите предполагаемые даты поездки, <br>
       и мы покажем вам лучшие предложения гостиниц в Седоне
     </p>
@@ -170,8 +170,11 @@
       </button>
     </form>
   </section>
+   </div>
+   </main>
 
   <footer>
+    <div class="page-footer-container">
     <section class="footer-social">
       <h2 class="visually-hidden" Давайте дружить></h2>
       <ul class="footer-social-list">
@@ -200,15 +203,15 @@
 
     </section>
 
-    <section class="visually-hidden">
+    <section class="footer-htmlacademy">
       <h2 class="visually-hidden"></h2> <a class="footer-htmlacademy-link" href="https://htmlacademy.ru/">
         <span class="visually-hidden"><img src="images/logohtml.svg" width="114.9" height="32.9"
             alt="HTMLAcademy"></span>
       </a></h2>
-
-
     </section>
+  </div>
   </footer>
+</div>
 </body>
 
 </html>
