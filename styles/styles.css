@@ -13,8 +13,10 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+
 html {
   height: 100%;
+  background: #F2F2F2;
 }
 
 body {
@@ -110,7 +112,6 @@ body {
   font-weight: 700;
   text-align: center;
   color: #000000;
-  background-color: #756257;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -119,17 +120,16 @@ body {
   width: 720px;
   padding: 0 240px;
   margin: 0;
+  background-color: #ffffff;
 }
 
 .first-screen-description {
   font-size: 22px;
   line-height: 36px;
   font-weight: 400;
-  text-align: center;
   color: #333333;
   background-color: #ffffff;
   text-decoration: none;
-  text-align: center;
   text-transform: none;
   padding: 0 240px;
   margin: 0;
@@ -141,9 +141,6 @@ body {
 
 .navigation-wants {
   background: #756257;
-  font-size: 160px;
-  line-height: 37px;
-  text-transform: uppercase;
   color: #ffffff;
   border-radius: 4px;
   font-size: 16px;
@@ -246,6 +243,10 @@ body {
   margin-bottom: 108px;
 }
 
+.page-footer-container {
+    background-color: #ffffff;
+}
+
 .subscribtion-proposal {
   background-image: url("../images/backgroundrassilka.jpg"); /*картинка не во всю страницу*/
   background-size: cover;
@@ -287,9 +288,6 @@ body {
 
 .page-footer-container {
   display: flex;
-  width: 100%;
-  max-width: 1200px;
-  margin: o auto;
 }
 
 .footer-social-item {
@@ -309,7 +307,7 @@ body {
 
 .footer-htmlacademy {
   margin-left: auto;
-  max-width: 44px; /*как-то криво стоят, переделай*/
+  max-width: 114.9px; /*как-то криво стоят, переделай*/
 }
 
 .subscribtion-field {
@@ -331,20 +329,25 @@ body {
  }
 
  .catalog-filter-group {
-     padding-left: 71px;
-     padding-right: 67px;
-     margin: 0 auto;
+  padding-left: 71px;
+  padding-right: 67px;
+  margin: 0 auto;
  }
+
+ .main-catalog {
+  background-color: #ffffff;
+ }
+
  .catalog-filter-group-type {
-     padding-right: 216px;
-     margin: 0 auto;
+   padding-right: 216px;
+   margin: 0 auto;
  }
 
  .cost {
      width: 227px;
  }
 
- .button button-apply {
+ .button .button-apply {
     color: #ffffff;
     background: #83B3D3;
     border-radius: 4px;
@@ -377,16 +380,17 @@ body {
 
 .catalog-found-hotels {
     display: flex;
+    align-items: stretch; 
+    padding-right: 192px;
     margin-top: 50px;
     margin-bottom: 53px;
     width: 1057px;
-    padding-right: 192px; /*не сработал отступ*/
-
-
+    
 }
 
 .select-control{
    width: 287px;
+    /*не сработал отступ*/
 }
 
 .found-hotels {
@@ -430,7 +434,6 @@ fieldset.cost*/
 }
 
 .product-card-more {
-  /*кнопки в одну строчку*/
   background: #756257;
   border-radius: 4px;
   font-size: 16px;
@@ -473,4 +476,5 @@ fieldset.cost*/
 .subscribtion-proposal-second {
   text-align: center;
   color: #000000;
+  background-color: #ffffff;
 }
