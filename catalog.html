@@ -26,15 +26,16 @@
                         <a class="navigation-link" href="catalog.html">Гостиницы</a>
                     </li>
                 </ul>
-                <ul class="navigation-user">
+
+                <ul class="navigation-list navigation-user">
                     <li class="navigation-item">
                         <a class="navigation-link" href="#">
-                            <div class="search"> <span class="visually-hidden"> </span>Поиск</div>
+                            <div class="search"> <span class="visually-hidden">Поиск </span></div>
                         </a>
                     </li>
                     <li class="navigation-item">
                         <a class="navigation-link" href="#">
-                            <div class="favorite"> <span class="visually-hidden"> </span>Отложенные</div>
+                            <div class="favorite"> <span class="visually-hidden">Отложенные </span></div>
                         </a>
                     </li>
                     <li class="navigation-item">
@@ -56,7 +57,7 @@
                             <a class="hotels-link">Гостиницы</a>
                     </ol>
 
-                    <h2 class="visually-hidden" hidden>Критерии отеля:</h2>
+                    <h2 class="visually-hidden">Критерии отеля:</h2>
                     <form class="filter-hotel">
                         <fieldset class="catalog-filter-group">
                             <legend class="catalog-filter-title">Инфраструктура:</legend>
@@ -132,10 +133,11 @@
                                 <input class="range-slider_input" type="range" min="0" max="12000" value="9000"
                                     step="100" aria-label="Max range" />
                             </p>
+                            <button class="button button-apply" type="button" href="#">Применить</button>
+                        <button class="button button-reset" type="reset" href="#">Сбросить</button>
                         </fieldset>
 
-                        <button class="button button-apply" type="button" href="#">Применить</button>
-                        <button class="button button-reset" type="reset" href="#">Сбросить</button>
+                        
 
                     </form>
 
@@ -143,19 +145,16 @@
             </div>
             <div class="main-catalog">
             <div class="display">
-                <section class="catalog-found-hotels">
                     <h2 class="found-hotels">Найдено гостиниц: 38</h2>
-
                     <form>
                         <select class="select-control" aria-label="Сортировка">
                             <option value="cheap">Сначала дешёвые</option>
                         </select>
                     </form>
-                </section>
             </div>
                 <section class="catalog-products">
                     <div class="catalog-right-column">
-                        <h2 class="visually-hidden" hidden>Все предложения</h2>
+                        <h2 class="visually-hidden">Все предложения</h2>
                         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                             <!--не отображается как закрытый-->
                             <ul class="product-list">
