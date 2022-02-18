@@ -148,11 +148,6 @@ body {
   width: 1200px;
   margin: auto;
 }
-/*
- .real-town {
-     display: flex;
-     justify-content: center; три столбца а не два (настоящий городок+фото), почему?
- }*/
 
 .city-description {
   font-size: 30px;
@@ -205,16 +200,17 @@ body {
   text-align: center;
 }
 
-/*
 .advantage-container {
   display: flex;
-  flex-direction: column;
-  width: 400px;
-  height: 384px;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  background: white;
-} */
+  background: #ffffff;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
 
 .navigation-wants {
   background: #756257;
@@ -261,9 +257,7 @@ body {
   color: #ffffff;
   font-size: 18px;
   line-height: 21px;
-  padding-left: 90px;
-  padding-right: 90px;
-  padding-bottom: 77px;
+  width: 400px;
 }
 
 .discription-of-the-reason,
@@ -280,18 +274,35 @@ body {
   color: #333333;
 }
 
-.advantage-item-food {
-  background: #ffffff;
-  text-align: center;
+.advantage-item-home,
+.advantage-item-present {
+  background: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 384px;
 }
 
-.blue-color {
-  text-align: center;
-  background: rgba(131, 179, 211, 0.12);
+.advantage-item-home {
+ padding-top: 89px;
+}
+
+.advantage-item-food {
+    width: 400px;
+    height: 384px;
+    padding-top: 91px;
+}
+
+.advantage-item-present {
+    padding-top: 85px;
 }
 
 .advantage-item-roud {
   background: rgba(131, 179, 211, 0.2);
+  width: 400px;
+}
+
+.advantage-item-smalltown, .advantage-item-few-tourists {
+    background: rgba(131, 179, 211, 0.12);
+    width: 400px;
 }
 
 .seach-hotel {
@@ -309,6 +320,7 @@ body {
   text-align: center;
   padding-top: 91px;
   padding-bottom: 15px;
+  margin: 0;
 }
 
 .choose-days {
@@ -359,16 +371,13 @@ body {
   padding: 0 240px;
   margin: 15px;
 }
-.subscribtion-email {
-  /*подписаться на рассылку*/
-  width: 600px;
-  height: 60px; /*не сработала высота*/
-  padding: 60px;
-  color: #000000;
-  padding-left: 22px;
-}
+
 .subscribtion-field {
   width: 600px;
+  height: 60px;
+  color: #000000;
+  padding-left: 22px;
+  margin-bottom: 94px;
 }
 
 .button-link {
@@ -391,8 +400,9 @@ body {
 }
 
 /*FOOTER*/
-footer-social-list {
+.footer-social-list {
   list-style-type: none;
+  /*гриды*/
 }
 
 .page-footer-container {
@@ -438,15 +448,17 @@ footer-social-list {
 
 .hotels {
   list-style-type: none;
+  display: flex;
 }
 
 .catalog-filter-group {
   padding-left: 71px;
   padding-right: 67px;
   margin: 0 auto;
+  border: none;
 }
 
-catalog-filter-list {
+.catalog-filter-list {
   list-style-type: none; /*не сработал*/
 }
 
@@ -454,13 +466,22 @@ catalog-filter-list {
   background-color: #ffffff;
 }
 
+.catalog-filter-item {
+    border: none;
+    padding-right: 67px;
+}
+
 .catalog-filter-group-type {
   padding-right: 216px;
   margin: 0 auto;
+  border: none;
+  padding-right: 167px;
 }
 
 .cost {
   width: 227px;
+  border: none;
+  display: flex;
 }
 
 .button {
@@ -477,16 +498,20 @@ catalog-filter-list {
 .button-apply {
   background: #83b3d3;
   text-transform: uppercase;
+  border: none;
+  margin: 20px;
 }
 
 .button-reset {
   background: transparent;
+  border: none;
 }
 
 .title-header {
   font-size: 60px;
   line-height: 78px;
   font-weight: bold;
+  margin: 0;
 }
 
 .catalog-products {
@@ -517,12 +542,12 @@ catalog-filter-list {
   font-style: normal;
 }
 
-/*стоимость
-fieldset.cost*/
+.product-list, .pagination {
+list-style: none;
+}
 
 .catalog-right-column {
-  display: flex;
-  width: 1058px;
+  padding: 0 20px;
 }
 
 .product-card-title {
@@ -537,7 +562,7 @@ fieldset.cost*/
   line-height: 23px;
 }
 
-.product-card-more product-card-farorite {
+.product-card-more .product-card-farorite {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
@@ -551,6 +576,7 @@ fieldset.cost*/
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
+  border: none;
 }
 
 .product-card-farorite {
@@ -559,6 +585,7 @@ fieldset.cost*/
   font-size: 16px;
   line-height: 21px;
   color: #ffffff;
+  border: none;
 }
 
 .rating {
@@ -576,19 +603,22 @@ fieldset.cost*/
 .button-more {
   font-weight: bold;
   text-transform: uppercase;
-  text-align: center;
   background: #83b3d3;
   border-radius: 4px;
   font-size: 20px;
   line-height: 26px;
-  align-items: center;
   color: #ffffff;
   font-style: normal;
-  display: flex;
-  align-items: center;
   text-align: center;
-  text-transform: uppercase;
-  width: 619.83px;
+  width: 620px;
+  height: 60px;
+  border: none;
+  margin-left: 290px;
+  margin-right: 290px;
+}
+
+.email {
+    visibility: hidden;
 }
 /* ПАГИНАЦИЯ
 .pagination {
@@ -599,6 +629,10 @@ fieldset.cost*/
 
 }
 */
+
+.button-subscribe {
+    border: none;
+}
 
 .subscribtion-proposal-second {
   text-align: center;
