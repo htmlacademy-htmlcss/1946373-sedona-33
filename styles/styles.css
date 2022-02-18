@@ -548,6 +548,7 @@ list-style: none;
 
 .catalog-right-column {
   padding: 0 20px;
+  overflow: hidden;
 }
 
 .product-card-title {
