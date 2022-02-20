@@ -282,17 +282,17 @@ body {
 }
 
 .advantage-item-home {
- padding-top: 89px;
+  padding-top: 89px;
 }
 
 .advantage-item-food {
-    width: 400px;
-    height: 384px;
-    padding-top: 91px;
+  width: 400px;
+  height: 384px;
+  padding-top: 91px;
 }
 
 .advantage-item-present {
-    padding-top: 85px;
+  padding-top: 85px;
 }
 
 .advantage-item-roud {
@@ -300,9 +300,10 @@ body {
   width: 400px;
 }
 
-.advantage-item-smalltown, .advantage-item-few-tourists {
-    background: rgba(131, 179, 211, 0.12);
-    width: 400px;
+.advantage-item-smalltown,
+.advantage-item-few-tourists {
+  background: rgba(131, 179, 211, 0.12);
+  width: 400px;
 }
 
 .seach-hotel {
@@ -467,8 +468,20 @@ body {
 }
 
 .catalog-filter-item {
-    border: none;
-    padding-right: 67px;
+  border: none;
+  padding-right: 67px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card {
+    width: 339px;
+    height: 438px ;
+}
+
+.product-card-content {
+    padding: 20px;
+    padding-top: 16px;
 }
 
 .catalog-filter-group-type {
@@ -512,6 +525,7 @@ body {
   line-height: 78px;
   font-weight: bold;
   margin: 0;
+  padding-left: 71px;
 }
 
 .catalog-products {
@@ -542,13 +556,32 @@ body {
   font-style: normal;
 }
 
-.product-list, .pagination {
-list-style: none;
+.product-list,
+.pagination {
+  list-style: none;
 }
 
-.catalog-right-column {
-  padding: 0 20px;
+.catalog-column {
   overflow: hidden;
+  margin-left: 110px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: 339px 339px 339px;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 34px;
+}
+
+.product-card-button {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.product-card-more {
+  margin-right: 25px;
 }
 
 .product-card-title {
@@ -563,11 +596,15 @@ list-style: none;
   line-height: 23px;
 }
 
-.product-card-more .product-card-farorite {
+.product-card-more,
+.product-card-farorite {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
+  text-transform: uppercase;
+  width: 140px;
+  height: 37px;
   text-transform: uppercase;
 }
 
@@ -619,20 +656,42 @@ list-style: none;
 }
 
 .email {
-    visibility: hidden;
+  visibility: hidden;
 }
-/* ПАГИНАЦИЯ
+
+/* ПАГИНАЦИЯ*/
+
 .pagination {
     display: flex;
+    width: 1056px;
+    height: 55px;
+    margin-left: 83px;
+    margin-top: 30px;
+}
+
+.pagination a {
     width: 55px;
     height: 55px;
-    padding-right: 8px;
-
+    text-decoration: none;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 20px;
+    line-height: 26px;
+    background: #83B3D3;
+    color: #FFFFFF;
 }
-*/
+/*
+.pagination a:nth-child(1) {
+    background: #F2F2F2;
+    color: #000000;
+} */
 
 .button-subscribe {
-    border: none;
+  border: none;
 }
 
 .subscribtion-proposal-second {
