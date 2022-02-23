@@ -260,6 +260,10 @@ body {
   width: 400px;
 }
 
+.discription-of-the-reason {
+    text-transform: uppercase;
+}
+
 .discription-of-the-reason,
 .explanation-color-black {
   font-size: 18px;
@@ -460,7 +464,7 @@ body {
 }
 
 .catalog-filter-list {
-  list-style-type: none; /*не сработал*/
+  list-style-type: none;
 }
 
 .main-catalog {
@@ -475,13 +479,10 @@ body {
 }
 
 .product-card {
-    width: 339px;
-    height: 438px ;
-}
-
-.product-card-content {
-    padding: 20px;
-    padding-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 26px;
+  padding: 20px;
 }
 
 .catalog-filter-group-type {
@@ -541,7 +542,6 @@ body {
 
 .select-control {
   width: 287px;
-  /*не сработал отступ*/
 }
 
 .found-hotels {
@@ -563,31 +563,33 @@ body {
 
 .catalog-column {
   overflow: hidden;
-  margin-left: 110px;
 }
 
 .product-list {
   display: grid;
-  grid-template-columns: 339px 339px 339px;
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 16px;
   margin: 0;
   padding: 0;
   margin-bottom: 34px;
 }
 
-.product-card-button {
-  padding-top: 16px;
-  padding-bottom: 16px;
+.product-card-link {
+  grid-column: 1/-1;
+  text-decoration: none;
+  color: inherit;
 }
 
-.product-card-more {
-  margin-right: 25px;
+.product-card-img {
+  width: 100%;
+  height: auto;
 }
 
 .product-card-title {
   font-weight: bold;
   font-size: 24px;
-  line-height: 31px;
+  line-height: 1.29;
+  margin: 0;
 }
 
 .product-card-type {
@@ -598,6 +600,9 @@ body {
 
 .product-card-more,
 .product-card-farorite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
@@ -605,25 +610,28 @@ body {
   text-transform: uppercase;
   width: 140px;
   height: 37px;
-  text-transform: uppercase;
+  padding: 9px 8px 10px;
+  border-radius: 4px;
+  color: #ffffff;
+  border: none;
 }
 
 .product-card-more {
   background: #756257;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 21px;
-  color: #ffffff;
-  border: none;
 }
 
 .product-card-farorite {
   background: #83b3d3;
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 21px;
-  color: #ffffff;
-  border: none;
+}
+
+.product-card-farorite-cheked {
+  background: #7db54f;
+}
+
+.product-card-raiting {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
 }
 
 .rating {
@@ -631,6 +639,12 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  width: 168px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
 }
 /* попытка сделать звезды
 .product-card-stars {
@@ -662,33 +676,33 @@ body {
 /* ПАГИНАЦИЯ*/
 
 .pagination {
-    display: flex;
-    width: 1056px;
-    height: 55px;
-    margin-left: 83px;
-    margin-top: 30px;
+  display: flex;
+  width: 1056px;
+  height: 55px;
+  margin-left: 83px;
+  margin-top: 30px;
 }
 
 .pagination a {
-    width: 55px;
-    height: 55px;
-    text-decoration: none;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-weight: bold;
-    margin-right: 8px;
-    font-size: 20px;
-    line-height: 26px;
-    background: #83B3D3;
-    color: #FFFFFF;
+  width: 55px;
+  height: 55px;
+  text-decoration: none;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+  margin-right: 8px;
+  font-size: 20px;
+  line-height: 26px;
+  background: #83b3d3;
+  color: #ffffff;
 }
-/*
-.pagination a:nth-child(1) {
+
+.pagination-link:not([href]) {
     background: #F2F2F2;
-    color: #000000;
-} */
+    color: #000000; 
+} 
 
 .button-subscribe {
   border: none;
@@ -698,4 +712,5 @@ body {
   text-align: center;
   color: #000000;
   background-color: #ffffff;
+  padding-bottom: 140px;
 }
