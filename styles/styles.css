@@ -261,7 +261,7 @@ body {
 }
 
 .discription-of-the-reason {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .discription-of-the-reason,
@@ -365,7 +365,7 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   padding: 0 240px;
-  padding-top: 94px;
+  padding-top: 90px;
   padding-bottom: 15px;
   margin: 0;
 }
@@ -599,7 +599,8 @@ body {
 }
 
 .product-card-more,
-.product-card-farorite {
+.product-card-farorite,
+.product-card-farorite-cheked {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -634,7 +635,9 @@ body {
   justify-content: space-between;
 }
 
-.rating {
+.raiting {
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
@@ -700,9 +703,9 @@ body {
 }
 
 .pagination-link:not([href]) {
-    background: #F2F2F2;
-    color: #000000; 
-} 
+  background: #f2f2f2;
+  color: #000000;
+}
 
 .button-subscribe {
   border: none;
