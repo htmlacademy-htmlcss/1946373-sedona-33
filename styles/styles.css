@@ -104,8 +104,11 @@ body {
   text-decoration: none;
   font-style: normal;
   font-size: 20px;
-  margin: 0px 34px;
+  margin: 20px 0;
+  margin-left: 50px;
+  margin-right: 34px;
 }
+
 /*
 .search {
   background-image: url("../images/search.svg");
@@ -220,6 +223,18 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   text-decoration-line: none;
+  width: 160px;
+  margin: 14px 0;
+  margin-left: 20px;
+  border: none;
+  
+}
+
+.navigation-wants,
+.button-apply {
+    padding: 0 15px;
+  padding-top: 9px;
+  padding-bottom: 8px;
 }
 
 .resons {
@@ -346,6 +361,7 @@ body {
   margin-left: 313px;
   margin-right: 313px;
   margin-bottom: 108px;
+  cursor: pointer;
 }
 
 .page-footer-container {
@@ -387,6 +403,7 @@ body {
 
 .button-link {
   float: left;
+  cursor: pointer;
 }
 
 .button-subscribe {
@@ -402,6 +419,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
 }
 
 /*FOOTER*/
@@ -507,18 +525,20 @@ body {
   width: 160px;
   text-decoration: none;
   border-radius: none;
+  cursor: pointer;
 }
 
 .button-apply {
   background: #83b3d3;
   text-transform: uppercase;
-  border: none;
   margin: 20px;
+  border: none;
 }
 
 .button-reset {
   background: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .title-header {
@@ -670,6 +690,7 @@ body {
   border: none;
   margin-left: 290px;
   margin-right: 290px;
+  cursor: pointer;
 }
 
 .email {
@@ -709,6 +730,7 @@ body {
 
 .button-subscribe {
   border: none;
+  cursor: pointer;
 }
 
 .subscribtion-proposal-second {
