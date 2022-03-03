@@ -56,9 +56,11 @@
                     <h1 class="title-header">Гостиницы Седоны</h1>
                     <ol class="hotels">
                         <li class="hotels-item">
-                            <a class="hotels-link" href="index.html">Главная</a>
+                            <a class="hotels-link visually-hidden" href="index.html">Главная</a>
+                            <svg width="12" height="12" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M6 .3 0 5.8V12h12V5.8L6 .3ZM11 11H1V6.2l5-4.5 5 4.5V11Z" fill="#fff"/><path d="M4 10h1V7.5h2V10h1V6.5H4V10Z" fill="#fff"/></svg>
                             </il>
-                        <li class=hotels-item">
+                        <li class="hotels-item allows"></li>
+                        <li class="hotels-item">
                             <a class="hotels-link">Гостиницы</a>
                     </ol>
 
@@ -143,21 +145,26 @@
                         <button class="button button-reset" type="reset" href="#">Сбросить</button>
                         </div>
                         </fieldset>
-
-                        
-
                     </form>
-
                 </header>
             </div>
             <div class="main-catalog">
             <div class="display">
                     <h2 class="found-hotels">Найдено гостиниц: 38</h2>
                     <form>
+                        <div class="sorting-type">
                         <select class="select-control" aria-label="Сортировка">
                             <option value="cheap">Сначала дешёвые</option>
+                            <option value="popular">Сначала популярное</option>
+                            <option value="expensive">Сначала дорогое</option> 
                         </select>
-                    </form>
+                    </div>
+                     </form> 
+                    <div class="sort-buttons">
+                                <button class="sort-button-active"></button>
+                                <button class="sort-button-center"></button>
+                                <button class="sort-button-right"></button>
+                  </div>
             </div>
                 <section class="catalog-products">
                     <div class="catalog-column">
@@ -175,8 +182,13 @@
                                         <button class="product-card-more" href="#">Подробнее</button>
                                         <button class="product-card-farorite" href="#">В избранное</button>
                                    <div class="product-card-raiting">
-                                        <!-- <img src="#" alt="4 звезды" > -->
-                                        <b class="raiting">Рейтинг: 8,5 </b>
+                                     <div class="raiting-stars"> 
+                                         <img class="stars" width="18" height="18" src='images/stars.svg' alt="4 звезды">
+                                         <img class="stars" width="18" height="18" src='images/stars.svg' alt="4 звезды">
+                                         <img class="stars" width="18" height="18" src='images/stars.svg' alt="4 звезды">
+                                         <img class="stars" width="18" height="18" src='images/stars.svg' alt="4 звезды">
+                                     </div> 
+                                         <b class="raiting">Рейтинг: 8,5 </b>
                                     </div>
                                 </li>
 
@@ -192,7 +204,11 @@
                                         <button class="product-card-more" href="#">Подробнее</button>
                                     <button class="product-card-farorite" href="#">В избранное</button>
                                     <div class="product-card-raiting">
-                                        <!-- <img src="#" alt="3 звезды" > -->
+                                        <div class="raiting-stars"> 
+                                            <img class="stars" width="18" height="18" src='images/stars.svg' alt="3 звезды">
+                                            <img class="stars" width="18" height="18" src='images/stars.svg' alt="3 звезды">
+                                            <img class="stars" width="18" height="18" src='images/stars.svg' alt="3 звезды">
+                                        </div> 
                                      <b class="raiting">Рейтинг: 8,9 </b>
                                     </div>
                                 </li>
@@ -210,7 +226,10 @@
                                         <button class="product-card-more" href="#">Подробнее</button> 
                                      <button class="product-card-farorite-cheked" href="#">В избранном</button>
                                     <div class="product-card-raiting">
-                                        <!-- <img src="#" alt="2 звезды" > -->
+                                        <div class="raiting-stars"> 
+                                            <img class="stars" width="18" height="18" src='images/stars.svg' alt="2 звезды">
+                                            <img class="stars" width="18" height="18" src='images/stars.svg' alt="2 звезды">
+                                        </div> 
                                        <b class="raiting">Рейтинг: 9,2 </b>
                                     </div>
                                 </li>
@@ -228,8 +247,11 @@
                                         <button class="product-card-more" href="#">Подробнее</button> 
                                     <button class="product-card-farorite" href="#">В избранное</button> 
                                     <div class="product-card-raiting"> 
-                                        <!-- <img src="#" alt="2 звезды" > -->
-                                      <b class="rating">Рейтинг: 9,2 </b> 
+                                        <div class="raiting-stars"> 
+                                            <img class="stars" width="18" height="18" src='images/stars.svg' alt="2 звезды">
+                                            <img class="stars" width="18" height="18" src='images/stars.svg' alt="2 звезды">
+                                        </div> 
+                                      <b class="raiting">Рейтинг: 9,2 </b> 
                                     </div>
                                 </li>
                             </ul>
@@ -237,6 +259,7 @@
                           <button class="button-more" type="submit">Загрузить еще</button>    
 
                             <!-- Пагинация -->
+                            <div class="pagination-form-blok">
                             <ul class="pagination">
                                 <li class="pagination-item">
                                     <a class="pagination-link">1</a>
@@ -257,6 +280,15 @@
                                     <a class="pagination-link" href="#">10</a>
                                 </li>
                             </ul>
+                            <form class="sorting">
+                                <p class="number-of-hotels">Гостиниц на странице: </p> 
+                                <select class="select-control" aria-label="Сортировка">
+                                    <option value="cheap">4</option>
+                                    <option value="cheap">6</option>
+                                    <option value="cheap">8</option>
+                                </select>
+                            </form>
+                            </div>
                     </div>
                    
                 </section>

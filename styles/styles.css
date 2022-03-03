@@ -469,6 +469,9 @@ body {
 /*FOOTER*/
 .footer-social-list {
   list-style-type: none;
+  display: grid;
+    gap: 30px;
+    grid-template-columns: 18px 18px 21px;
 }
 
 .page-footer-container {
@@ -491,8 +494,13 @@ a[href^="tel:"] {
   padding-right: 53px;
   padding-top: 40px;
   padding-bottom: 30px;
-  
 }
+
+.footer-contacts-address-phone {
+    padding-left: 61px;
+}
+
+
 /*
 .footer-contacts a {
   font-size: 40px;
@@ -506,7 +514,7 @@ a[href^="tel:"] {
 
 .footer-htmlacademy {
   margin-left: auto;
-  max-width: 114.9px; /*как-то криво стоят, переделай*/
+  max-width: 115px; /*как-то криво стоят, переделай*/
 }
 
 .subscribtion-field {
@@ -529,6 +537,20 @@ a[href^="tel:"] {
 .hotels {
   list-style-type: none;
   display: flex;
+}
+
+.hotels-link {
+  font-size: 16px;
+  line-height: 21px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.allows {
+  background-image: url("../images/arrow.svg");
+  width: 5px;
+  height: 8px;
+  padding-right: 10px; /*стрелка заплывает между домиком и гостиницей*/
 }
 
 .catalog-filter-group {
@@ -605,6 +627,45 @@ a[href^="tel:"] {
   margin: 0;
   padding-left: 71px;
 }
+.sort-button-active {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #ffffff;
+  background-image: url("../images/mode-tile\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sort-button-center {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #e6e6e6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #ffffff;
+  background-image: url("../images/mode-slideshow\ 1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sort-button-right {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #e6e6e6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../images/mode-list\ 1.svg");
+}
+
+.sort-buttons {
+  gap: 8px;
+}
 
 .catalog-products {
   color: black;
@@ -617,8 +678,15 @@ a[href^="tel:"] {
   align-items: center;
 }
 
-.select-control {
+.select {
   width: 287px;
+  height: 48px;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  gap: 81px;
 }
 
 .found-hotels {
@@ -712,6 +780,14 @@ a[href^="tel:"] {
   justify-content: space-between;
 }
 
+.raiting-stars {
+  margin-top: 10px;
+}
+
+.stars {
+  margin: 0;
+}
+
 .raiting {
   font-style: normal;
   font-weight: normal;
@@ -748,10 +824,16 @@ a[href^="tel:"] {
   margin-left: 290px;
   margin-right: 290px;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .email {
   visibility: hidden;
+}
+
+.pagination-form-blok {
+  display: flex;
+  align-items: center;
 }
 
 /* ПАГИНАЦИЯ*/
@@ -783,6 +865,30 @@ a[href^="tel:"] {
 .pagination-link:not([href]) {
   background: #f2f2f2;
   color: #000000;
+}
+
+.sorting {
+  display: flex;
+}
+
+.number-of-hotels {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  width: 175px;
+  height: 48px;
+  margin-top: 33px;
+  margin-right: 72px;
+  padding-top: 16px;
+}
+
+.select-control {
+  width: 160px;
+  margin-right: 72px;
+  height: 48px;
+  margin-top: 33px;
 }
 
 .button-subscribe {
