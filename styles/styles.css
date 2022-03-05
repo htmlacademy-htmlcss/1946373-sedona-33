@@ -64,6 +64,41 @@ body {
   margin: o auto;
 }
 
+.navigation-link:hover {
+  color: #756257;
+}
+
+.navigation-link:focus {
+  visibility: hidden;
+}
+
+.navigation-link:active {
+  color: rgba(117, 98, 87, 0.3); /*не сработало почему-то*/
+}
+
+.navigation-item:hover {
+  fill: #756257;
+  border: #000000;
+}
+
+.navigation-item:active {
+  fill: #756257;
+}
+
+.navigation-wants:hover {
+  background: #615048;
+}
+
+.navigation-wants:focus {
+  background: #615048;
+  border: 3px solid #83b3d3;
+}
+
+.navigation-wants:active {
+  background: #615048;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .navigation-list .logo {
   width: 420px;
   margin: 0;
@@ -303,6 +338,17 @@ body {
   width: 400px;
 }
 
+.explanation-first::before {
+ position: absolute;
+ content: "— №1 —";
+ bottom: -50px;
+ width: 250px;
+ height: 25px;
+ margin-left: -125px;
+ 
+color: #FFFFFF;
+}
+
 .discription-of-the-reason {
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -400,6 +446,20 @@ body {
   cursor: pointer;
 }
 
+.button-finding:hover {
+  background: #615048;
+}
+
+.button-finding:focus {
+  border: 3px solid #83b3d3;
+}
+
+.button-finding:active {
+  background: #615048;
+  color: #ffffff;
+  opacity: 0.3; /*срабатывает для всей кнопки, как сделать, чтобы только для текста?*/
+}
+
 .page-footer-container {
   background-color: #ffffff;
 }
@@ -436,9 +496,22 @@ body {
   color: #000000;
   padding-left: 22px;
   margin-bottom: 94px;
-  border: none;
+  border-radius: 0px 10px 10px 0px;
+  transform: matrix(-1, 0, 0, 1, 0, 0); /*что значит это свойство из фигмы?*/
   background: #f2f2f2;
 }
+
+.subscribtion-field:hover {
+  background: #e6e6e6;
+}
+
+.subscribtion-field:focus {
+  border: 3px solid #83b3d3;
+}
+/*
+.subscribtion-field:valid {                 ошибка, какой псевдокласс?
+    border: 2px solid #FF5757;
+} */
 
 .email-subscription {
   display: flex;
@@ -463,15 +536,32 @@ body {
   text-align: center;
   text-transform: uppercase;
   border-radius: 0px 10px 10px 0px;
-  cursor: pointer;
+}
+
+.button-subscribe:hover {
+  background: #68a2ca;
+}
+
+.button-subscribe:focus {
+  background: #68a2ca;
+  border: 3px solid #756257;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.button-subscribe:active {
+  background: #68a2ca;
+}
+
+.subscribe-action:active {
+  opacity: 0.3;
 }
 
 /*FOOTER*/
 .footer-social-list {
   list-style-type: none;
   display: grid;
-    gap: 30px;
-    grid-template-columns: 18px 18px 21px;
+  gap: 30px;
+  grid-template-columns: 18px 18px 21px;
 }
 
 .page-footer-container {
@@ -483,6 +573,16 @@ body {
 .footer-social-item {
   width: 107px;
   margin-right: 61px;
+}
+
+.footer-social-item:active {
+  background: #68a2ca;
+}
+
+.footer-social-item:focus {
+  border: 3px solid #83b3d3;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 a[href^="tel:"] {
@@ -497,20 +597,26 @@ a[href^="tel:"] {
 }
 
 .footer-contacts-address-phone {
-    padding-left: 61px;
+  padding-left: 61px;
 }
 
+.footer-contacts-address-phone:hover
+.footer-htmlacademy-link:hover {
+  color: #756257;
+}
 
-/*
-.footer-contacts a {
-  font-size: 40px;
-  line-height: 40px;
-  color: #000000;
-  text-decoration-line: none;
-  padding-right: 53px;
-  padding-top: 40px;
-  padding-bottom: 30px;
-} */
+.footer-contacts-address-phone:focus
+.footer-htmlacademy-link:focus {
+  border: 3px solid #83b3d3;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.footer-contacts-address-phone:active
+.footer-htmlacademy-link:active {
+  color: #756257;
+  opacity: 0.3;
+}
 
 .footer-htmlacademy {
   margin-left: auto;
