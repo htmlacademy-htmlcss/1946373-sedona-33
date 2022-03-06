@@ -61,7 +61,10 @@ body {
 .navigation {
   display: flex;
   width: 1060px;
-  margin: o auto;
+  margin-bottom: -20px;
+  padding-left: 186px;
+  position: relative;
+  height: 65px;
 }
 
 .navigation-link:hover {
@@ -74,6 +77,12 @@ body {
 
 .navigation-link:active {
   color: rgba(117, 98, 87, 0.3); /*не сработало почему-то*/
+}
+
+.navigation-link:not([href]) {
+  text-decoration: underline;
+  text-underline-offset: 24px;
+  text-decoration-thickness: 2px;
 }
 
 .navigation-item:hover {
@@ -99,18 +108,20 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.navigation-list .logo {
-  width: 420px;
-  margin: 0;
-  padding: 0;
-}
-
 .navigation-logo {
-  margin-left: 70px;
+  /*margin-left: 70px;*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: auto;
 }
 
 .navigation-list {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 100%;
+  gap: 34px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -120,21 +131,46 @@ body {
   max-width: 320px;
   margin-left: auto;
   list-style-type: none;
+  gap: 0;
+}
+
+.favorite {
+  position: relative;
+}
+
+.favorite-indicator {
+  background-color: #7db54f;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: block;
+  top: 15px;
+  right: 0;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: -0.1em;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  padding-bottom: 3px;
 }
 
 .navigation-user .navigation-link {
-  min-width: 20px;
-  min-height: 30px; /*меньше, чтобы не схлопывалось*/
+  min-width: 42px;
 }
 
 .page-header {
   color: #242424;
   background-color: #ffffff;
+  /*padding-left: 256px;
+  margin-bottom: -5px;*/
 }
 
 .navigation-link {
-  display: block;
-  font-family: "PT Sans", sans-serif;
+  display: flex;
+  font-family: inherit;
   line-height: 26px;
   font-weight: bold;
   text-align: center;
@@ -142,19 +178,10 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   font-style: normal;
+  height: 100%;
+  align-items: center;
   font-size: 20px;
-  padding: 24px 12px;
   position: relative;
-}
-
-.nav-maim {
-  padding-left: 50px;
-  padding-right: 34px;
-}
-
-.navigation-user .navigation-link {
-  min-width: 42px;
-  min-height: 66px;
 }
 
 .navigation-icon {
@@ -187,6 +214,7 @@ body {
   text-align: center;
   padding-top: 51px;
   padding-bottom: 82px;
+  margin-top: 21px;
 }
 
 .logo {
@@ -339,14 +367,14 @@ body {
 }
 
 .explanation-first::before {
- position: absolute;
- content: "— №1 —";
- bottom: -50px;
- width: 250px;
- height: 25px;
- margin-left: -125px;
- 
-color: #FFFFFF;
+  position: absolute;
+  content: "— №1 —";
+  bottom: -50px;
+  width: 250px;
+  height: 25px;
+  margin-left: -125px;
+
+  color: #ffffff;
 }
 
 .discription-of-the-reason {
@@ -374,8 +402,6 @@ color: #FFFFFF;
   background: rgba(131, 179, 211, 0.12);
   width: 400px;
   height: 384px;
-  margin-top: 23px;
-  margin-bottom: 20px;
 }
 
 .advantage-item-home {
@@ -386,8 +412,6 @@ color: #FFFFFF;
   width: 400px;
   height: 384px;
   padding-top: 91px;
-  margin-top: 23px;
-  margin-bottom: 20px;
 }
 
 .advantage-item-present {
@@ -433,6 +457,12 @@ color: #FFFFFF;
 }
 
 .button-finding {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
   background: #756257;
   font-size: 20px;
   line-height: 36px;
@@ -444,6 +474,8 @@ color: #FFFFFF;
   margin-right: 313px;
   margin-bottom: 108px;
   cursor: pointer;
+  padding: 9px;
+  border: 3px solid transparent;
 }
 
 .button-finding:hover {
@@ -451,20 +483,15 @@ color: #FFFFFF;
 }
 
 .button-finding:focus {
-  border: 3px solid #83b3d3;
+  border-color: #83b3d3;
 }
 
 .button-finding:active {
   background: #615048;
-  color: #ffffff;
-  opacity: 0.3; /*срабатывает для всей кнопки, как сделать, чтобы только для текста?*/
+  color: rgb(255 255 255 / 30%); 
 }
 
-.page-footer-container {
-  background-color: #ffffff;
-}
-
-.subscribtion-proposal {
+.subscription-proposal {
   background-image: url("../images/background-subscriprion.jpg");
   background-size: cover;
   text-align: center;
@@ -490,28 +517,27 @@ color: #FFFFFF;
   margin-bottom: 26px;
 }
 
-.subscribtion-field {
+.subscription-field {
   width: 600px;
   height: 60px;
   color: #000000;
   padding-left: 22px;
   margin-bottom: 94px;
-  border-radius: 0px 10px 10px 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0); /*что значит это свойство из фигмы?*/
+  border-radius: 10px 0 0 10px;
   background: #f2f2f2;
 }
 
-.subscribtion-field:hover {
+.subscription-field:hover {
   background: #e6e6e6;
 }
 
-.subscribtion-field:focus {
-  border: 3px solid #83b3d3;
+.subscription-field:focus {
+  outline: 3px solid #83b3d3;
 }
-/*
-.subscribtion-field:valid {                 ошибка, какой псевдокласс?
-    border: 2px solid #FF5757;
-} */
+
+.subscription-field-invalid {
+  border: 2px solid #ff5757;
+}
 
 .email-subscription {
   display: flex;
@@ -535,7 +561,7 @@ color: #FFFFFF;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .button-subscribe:hover {
@@ -557,6 +583,11 @@ color: #FFFFFF;
 }
 
 /*FOOTER*/
+
+.footer {
+  background-color: #ffffff ;
+}
+
 .footer-social-list {
   list-style-type: none;
   display: grid;
@@ -564,11 +595,23 @@ color: #FFFFFF;
   grid-template-columns: 18px 18px 21px;
 }
 
+.footer-social {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer {
+  padding: 40px 72px;
+  display: flex;
+}
+
+/*
 .page-footer-container {
   display: grid;
   grid-template-columns: 107px 720px 105px;
   gap: 60px;
-}
+} */
 
 .footer-social-item {
   width: 107px;
@@ -585,45 +628,52 @@ color: #FFFFFF;
   border-radius: 10px;
 }
 
-a[href^="tel:"] {
-  color: #000;
+.footer-contacts {
+  margin: 0 auto;
   font-size: 40px;
   line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
   color: #000000;
-  text-decoration-line: none;
-  padding-right: 53px;
-  padding-top: 40px;
-  padding-bottom: 30px;
+  text-decoration: none;
 }
 
 .footer-contacts-address-phone {
-  padding-left: 61px;
+  color: inherit;
+  font-style: normal;
 }
 
-.footer-contacts-address-phone:hover
-.footer-htmlacademy-link:hover {
+/*
+.footer-contacts-address-phone {
+  padding-left: 61px;
+} */
+
+.footer-link {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+
+.footer-link:hover {
   color: #756257;
 }
 
-.footer-contacts-address-phone:focus
-.footer-htmlacademy-link:focus {
-  border: 3px solid #83b3d3;
-  box-sizing: border-box;
-  border-radius: 10px;
+
+.footer-link:focus {
+  color: #756257;
+  outline: 3px solid #83b3d3;
+  border-radius: 1px;
+  outline-offset: 15px;
 }
 
-.footer-contacts-address-phone:active
-.footer-htmlacademy-link:active {
+
+.footer-link:active {
   color: #756257;
   opacity: 0.3;
 }
 
-.footer-htmlacademy {
-  margin-left: auto;
-  max-width: 115px; /*как-то криво стоят, переделай*/
-}
-
-.subscribtion-field {
+.subscription-field {
   font-family: "PT Sans", sans-serif;
 }
 
@@ -635,6 +685,7 @@ a[href^="tel:"] {
   background-color: #333333;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 21px;
 }
 .filter-hotel {
   display: flex;
@@ -702,6 +753,12 @@ a[href^="tel:"] {
 }
 
 .button {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
   color: #ffffff;
   font-size: 16px;
   border-radius: 4px;
@@ -994,7 +1051,6 @@ a[href^="tel:"] {
   width: 160px;
   margin-right: 72px;
   height: 48px;
-  margin-top: 33px;
 }
 
 .button-subscribe {
@@ -1002,7 +1058,7 @@ a[href^="tel:"] {
   cursor: pointer;
 }
 
-.subscribtion-proposal-second {
+.subscription-proposal-second {
   text-align: center;
   color: #000000;
   background-color: #ffffff;
