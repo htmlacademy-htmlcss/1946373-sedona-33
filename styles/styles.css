@@ -56,6 +56,7 @@ body {
 
 .main-container {
   flex-grow: 1;
+  counter-reset: feature;
 }
 
 .navigation {
@@ -349,7 +350,7 @@ body {
 
 .other-resons,
 .resons {
-  margin-bottom: 76px;
+  margin-bottom: 25px;
 }
 
 .real-town {
@@ -366,15 +367,11 @@ body {
   width: 400px;
 }
 
-.explanation-first::before {
-  position: absolute;
-  content: "— №1 —";
-  bottom: -50px;
-  width: 250px;
-  height: 25px;
-  margin-left: -125px;
-
-  color: #ffffff;
+.explanation-number::before {
+  counter-increment: feature;
+  content: "— №" counter(feature) " —";
+  display: block;
+  margin-bottom: 1.4em;
 }
 
 .discription-of-the-reason {
@@ -488,7 +485,7 @@ body {
 
 .button-finding:active {
   background: #615048;
-  color: rgb(255 255 255 / 30%); 
+  color: rgb(255 255 255 / 30%);
 }
 
 .subscription-proposal {
@@ -585,7 +582,7 @@ body {
 /*FOOTER*/
 
 .footer {
-  background-color: #ffffff ;
+  background-color: #ffffff;
 }
 
 .footer-social-list {
@@ -654,11 +651,9 @@ body {
   display: inline-flex;
 }
 
-
 .footer-link:hover {
   color: #756257;
 }
-
 
 .footer-link:focus {
   color: #756257;
@@ -666,7 +661,6 @@ body {
   border-radius: 1px;
   outline-offset: 15px;
 }
-
 
 .footer-link:active {
   color: #756257;
@@ -694,21 +688,42 @@ body {
 .hotels {
   list-style-type: none;
   display: flex;
+  gap: 5px;
 }
 
 .hotels-link {
   font-size: 16px;
   line-height: 21px;
-  padding-right: 10px;
-  padding-left: 10px;
 }
 
 .allows {
   background-image: url("../images/arrow.svg");
   width: 5px;
   height: 8px;
-  padding-right: 10px; /*стрелка заплывает между домиком и гостиницей*/
+  padding-right: 10px;
+  margin-top: 7px;
 }
+
+.hotels-item:hover{     /*с этим домиком не получилось, не понимаю причину*/
+  color: #ffffffc5;
+}
+
+.hotels-link:hover {
+  color: #ffffffc5;
+}
+
+.hotels-item:focus,
+.hotels-link:focus {
+  border: 3px solid #83B3D3; /*тут тоже текст прышает, что делать? p s помню про transperent, но не знаю как вставить*/
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.hotels-item:active,
+.hotels-link:active {
+  color: #ffffffa4;
+}
+
 
 .catalog-filter-group {
   padding-left: 71px;
@@ -777,10 +792,38 @@ body {
   border: none;
 }
 
+.button-apply:hover {
+  background: #68a2ca;
+}
+.button-apply:focus {
+  border: 3px solid #ffffff;
+  border-radius: 4px;
+}
+.button-apply:active {
+  background: #68a2ca;
+  color: rgb(255 255 255 / 30%);
+}
+
 .button-reset {
   background: transparent;
   border: none;
   cursor: pointer;
+  font-weight: normal;
+  text-transform: none;
+}
+
+.button-reset:hover {
+  color: #ffffff;
+  opacity: 0.6;
+}
+.button-reset:focus {
+  border: 3px solid #83b3d3;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.button-reset:active {
+  color: #ffffff;
+  opacity: 0.3;
 }
 
 .title-header {
@@ -828,6 +871,16 @@ body {
 
 .sort-buttons {
   gap: 8px;
+}
+
+.sort-button-center:hover,
+.sort-button-right:hover {
+  border: 2px solid #83b3d3;
+}
+
+.sort-button-center:focus,
+.sort-button-right:focus {
+  border: 2px solid #83b3d388;
 }
 
 .catalog-products {
@@ -893,6 +946,16 @@ body {
   height: auto;
 }
 
+.product-card-img:hover {
+  opacity: 0.6;
+}
+.product-card-img:focus {
+  border: 3px solid #83B3D3; /*картинка прыгает, как исправить? transperent же нельзя вставить*/
+}
+.product-card-img:active {
+  opacity: 0.3;
+}
+
 .product-card-title {
   font-weight: bold;
   font-size: 24px;
@@ -929,19 +992,63 @@ body {
   background: #756257;
 }
 
+.product-card-more:focus {
+  background: #615048;
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+.product-card-more:hover {
+  background: #615048;
+}
+.product-card-more:active {
+  color: #ffffffa4;
+  background: #615048;
+}
+
 .product-card-farorite {
   background: #83b3d3;
 }
 
-.product-card-farorite-cheked {
-  background: #7db54f;
+.product-card-farorite:focus {
+  background: #68A2CA;
+  border: 3px solid #756257;
+  border-radius: 4px;
 }
+.product-card-farorite:hover {
+background: #68A2CA;
+  border: 1px solid #756257;
+}
+.product-card-farorite:active {
+  color: #ffffffa4;
+  border: 1px solid #756257;
+}
+
+.product-card-farorite-cheked {
+  background: #68A2CA;
+  color: #ffffffa4;
+}
+
+.product-card-farorite-cheked:focus {
+  background: #6C9E42;
+  border: 3px solid #756257;
+border-radius: 4px;
+}
+.product-card-farorite-cheked:hover {
+  background: #6C9E42;
+}
+.product-card-farorite-cheked:active {
+  color: #ffffffa4;
+  background: #6C9E42;
+ 
+}
+
 
 .product-card-raiting {
   grid-column: 1/-1;
   display: flex;
   justify-content: space-between;
 }
+
 
 .raiting-stars {
   margin-top: 10px;
@@ -965,11 +1072,6 @@ body {
   justify-content: center;
   background: #f2f2f2;
 }
-/* попытка сделать звезды
-.product-card-stars {
-    background-image: url(../images/star.svg);
-}
-*/
 
 .button-more {
   font-weight: bold;
@@ -994,12 +1096,12 @@ body {
   visibility: hidden;
 }
 
+/* ПАГИНАЦИЯ*/
+
 .pagination-form-blok {
   display: flex;
   align-items: center;
 }
-
-/* ПАГИНАЦИЯ*/
 
 .pagination {
   display: flex;
@@ -1030,6 +1132,18 @@ body {
   color: #000000;
 }
 
+.pagination-link:hover {
+  background: #68a2ca;
+}
+.pagination-link:active {
+  background: #68a2ca;
+  border: 3px solid #756257;
+}
+.pagination-link:focus {
+  background: #68a2ca;
+  color: rgba(255, 255, 255, 0.589);
+}
+
 .sorting {
   display: flex;
 }
@@ -1044,13 +1158,49 @@ body {
   height: 48px;
   margin-top: 33px;
   margin-right: 72px;
-  padding-top: 16px;
+  padding-top: 10px;
 }
 
 .select-control {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
   width: 160px;
   margin-right: 72px;
   height: 48px;
+  width: 287px;
+  border: 2px solid #e6e6e6;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.select-control:hover .select:hover {
+  outline: 2px solid #83b3d3;
+}
+
+.select-control:focus .select:focus {
+  outline: 2px solid #83b3d3d8; /*в фигме заметно, что разные оттенки у наведения и фокуса, но прописан один цвет, так и должно быть?*/
+}
+
+.select-control:active .select:active {
+  color: #333333;
+  opacity: 0.3;
+}
+
+.select {
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  margin-top: 30px;
+  border: 2px solid #e6e6e6;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .button-subscribe {
