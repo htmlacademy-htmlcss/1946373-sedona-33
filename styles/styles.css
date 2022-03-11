@@ -146,7 +146,8 @@ body {
   width: 20px;
   display: block;
   top: 15px;
-  right: 0;
+  position: absolute;
+  right: 9px;
   font-weight: normal;
   font-size: 10px;
   line-height: 13px;
@@ -155,7 +156,7 @@ body {
   display: grid;
   place-items: center;
   place-content: center;
-  padding-bottom: 3px;
+  padding-bottom: 1px;
 }
 
 .navigation-user .navigation-link {
@@ -704,7 +705,8 @@ body {
   margin-top: 7px;
 }
 
-.hotels-item:hover{     /*с этим домиком не получилось, не понимаю причину*/
+.hotels-item:hover {
+  /*с этим домиком не получилось, не понимаю причину*/
   color: #ffffffc5;
 }
 
@@ -714,7 +716,7 @@ body {
 
 .hotels-item:focus,
 .hotels-link:focus {
-  border: 3px solid #83B3D3; /*тут тоже текст прышает, что делать? p s помню про transperent, но не знаю как вставить*/
+  outline: 3px solid #83b3d3; /*тут тоже текст прышает, что делать? p s помню про transperent, но не знаю как вставить*/
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -724,16 +726,93 @@ body {
   color: #ffffffa4;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control-mark:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control-mark:focus {
+  background: rgba(255, 255, 255, 0.6);
+  border: 3px solid #83b3d3;
+}
+
+.control-mark:active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-input[type="checkbox"]:checked {
+  position: absolute;
+  background-image: url("../images/check_mark.svg"); /*не сработала*/
+  top: 7px;
+  left: 2px;
+  width: 12px;
+  height: 10px;
+  fill: #3f5e72;
+  content: "";
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+  content: "";
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 43px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.control-label {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  padding-left: 40px;
+}
+
+.catalog-filter-title {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 30px;
+  margin-left: 71px;
+  padding: 0px;
+  margin-left: 67px;
+}
 
 .catalog-filter-group {
-  padding-left: 71px;
-  padding-right: 67px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0ch;
   border: none;
+  display: flex;
 }
 
 .catalog-filter-list {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-catalog {
@@ -743,8 +822,7 @@ body {
 .catalog-filter-item {
   border: none;
   padding-right: 67px;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .product-card {
@@ -754,17 +832,124 @@ body {
   padding: 20px;
 }
 
-.catalog-filter-group-type {
-  padding-right: 216px;
-  margin: 0 auto;
-  border: none;
-  padding-right: 167px;
+.filter-headline {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 34px;
 }
 
-.cost {
-  width: 227px;
+.range {
+  height: 20px;
+  position: absolute;
+}
+
+.range-wrapper-inputs {
   border: none;
   display: flex;
+  justify-content: flex-start;
+  width: 287px;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #333333;
+  width: 287px;
+}
+
+.cost_input {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  padding-left: 19px;
+  color: #ffffff;
+  background: transparent;
+  height: 48px;
+  margin-bottom: 32px;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+}
+
+.min {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.max {
+  border-radius: 0 4px 4px 0;
+}
+
+.min:focus {
+  border-radius: 4px 0px 0px 4px;
+  border-color: #68a2ca;
+}
+.min:active {
+  background: #756257;
+}
+
+.min:focus-visible {
+  outline: none;
+}
+
+.max:focus {
+  border-radius: 0 4px 4px 0;
+  border-color: #68a2ca;
+}
+.max:active {
+  background: #756257;
+}
+
+.max:focus-visible {
+  outline: none;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #e6e6e6;
+  left: 0px;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  background: #ffffff;
+}
+
+.button-cost {
+  display: grid;
+}
+
+.range-toggle:focus {
+  border: 3px solid #83b3d3;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.range-toggle:active {
+  border: 2px solid #83b3d3;
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .button {
@@ -788,8 +973,9 @@ body {
 .button-apply {
   background: #83b3d3;
   text-transform: uppercase;
-  margin: 20px;
   border: none;
+  margin-left: 81px;
+  height: 48px;
 }
 
 .button-apply:hover {
@@ -810,6 +996,8 @@ body {
   cursor: pointer;
   font-weight: normal;
   text-transform: none;
+  margin-left: 81px;
+  margin-top: -43px;
 }
 
 .button-reset:hover {
@@ -950,8 +1138,9 @@ body {
   opacity: 0.6;
 }
 .product-card-img:focus {
-  border: 3px solid #83B3D3; /*картинка прыгает, как исправить? transperent же нельзя вставить*/
+  outline: 3px solid #83b3d3; /*картинка прыгает, как исправить? transperent же нельзя вставить*/
 }
+
 .product-card-img:active {
   opacity: 0.3;
 }
@@ -994,7 +1183,7 @@ body {
 
 .product-card-more:focus {
   background: #615048;
-  border: 3px solid #83B3D3;
+  border: 3px solid #83b3d3;
   border-radius: 4px;
 }
 .product-card-more:hover {
@@ -1010,12 +1199,12 @@ body {
 }
 
 .product-card-farorite:focus {
-  background: #68A2CA;
+  background: #68a2ca;
   border: 3px solid #756257;
   border-radius: 4px;
 }
 .product-card-farorite:hover {
-background: #68A2CA;
+  background: #68a2ca;
   border: 1px solid #756257;
 }
 .product-card-farorite:active {
@@ -1024,31 +1213,28 @@ background: #68A2CA;
 }
 
 .product-card-farorite-cheked {
-  background: #68A2CA;
+  background: #68a2ca;
   color: #ffffffa4;
 }
 
 .product-card-farorite-cheked:focus {
-  background: #6C9E42;
+  background: #6c9e42;
   border: 3px solid #756257;
-border-radius: 4px;
+  border-radius: 4px;
 }
 .product-card-farorite-cheked:hover {
-  background: #6C9E42;
+  background: #6c9e42;
 }
 .product-card-farorite-cheked:active {
   color: #ffffffa4;
-  background: #6C9E42;
- 
+  background: #6c9e42;
 }
-
 
 .product-card-raiting {
   grid-column: 1/-1;
   display: flex;
   justify-content: space-between;
 }
-
 
 .raiting-stars {
   margin-top: 10px;
@@ -1201,6 +1387,9 @@ border-radius: 4px;
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 4px;
+  padding-left: 16px;
+  width: 160px;
+  margin-right: 72px;
 }
 
 .button-subscribe {
