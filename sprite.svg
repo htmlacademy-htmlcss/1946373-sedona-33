@@ -52,6 +52,15 @@
 <path d="M11.5 11C11.2 11 11 11.2 11 11.5C11 11.8 11.2 12 11.5 12C11.8 12 12 11.8 12 11.5C12 11.2 11.8 11 11.5 11Z" fill="black"/>
 </symbol>
 
+<symbol id="minus" viewBox="0 0 13 1">
+<path opacity="0.3" d="M0 0L0 1L13 1V0L0 0Z" fill="black"/>
+</symbol>
+
+<symbol id="plus" viewBox="0 0 13 13">
+<path opacity="0.3" d="M13 6H7V0H6V6H0V7H6V13H7V7H13V6Z" fill="black"/>
+</symbol>
+
+
  </svg>
 
 

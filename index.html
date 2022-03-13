@@ -54,9 +54,12 @@
 
   <main class="main-container index">
     <div class="page-container">
+      <section class="first-screen">
     <h1 class="visually-hidden">Седона</h1>
     <div class="logotype"><img class="logo" src="images/welcometosedona.svg" width="458" height="352"
-        alt="Фото Седона»"></div>
+        alt="Фото Седона»">
+        </section>
+    </div>
     <section class="city-description">
       <div class="slogan"><strong>Седона-небольшой городок в Аризоне, <br> заслуживающий большего!</strong></div>
       <p class="advantages-description"> Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p> 
@@ -150,7 +153,7 @@
 
   <footer class="footer">
     <address class="footer-social">
-      <a href=" https://twitter.com/htmlacademy_ru" aria-label="Социальные сети">
+      <a class="button-link" href=" https://twitter.com/htmlacademy_ru" aria-label="Социальные сети">
         <svg width="18" height="15" role="img" aria-labelledby="twitter" focusable="false"  fill="#83B3D3">
           <title id="twitter">Твиттер</title>
           <use href="sprite.svg#twitter"></use>  
@@ -188,7 +191,7 @@
   </footer>
 
   <!-- Модальное окно-->
-  <div class="modal-container ">
+  <div class="modal-container modal-container-close">
     <div class="modal modal-auth">
       <section class="modal-content">
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
@@ -227,21 +230,52 @@
          <div class="people-adults">
             <p> <label for="appointment-date-adults">Взрослые:</label></p>
               </div>
-              <div>
+              <div class="people-young">
             <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="2"> 
+            <button class="button-minus"><svg class="minus" width="13" height="1" role="img" aria-labelledby="minus" focusable="false"  fill="currentColor">
+              <title id="minus">Минус</title>
+               <use href="sprite.svg#minus"></use>
+             </svg> </button>
+             <button class="button-plus"> <svg class="plus" width="13" height="13" role="img" aria-labelledby="plus" focusable="false"  fill="currentColor">
+              <title id="plus">Плюс</title>
+               <use href="sprite.svg#plus"> </use>
+             </svg>
+            </button>
          </div>   
 
         <div class="people-young">
-            <p> <label for="appointment-date">Дети: <!--<p>Укажите количество детей, <br>которые будут с вами, возраст <br>которых от 6 до 18 лет. Дети<br>
-            до 6 лет размещаются<br> бесплатно.--></p>
-            <svg class="information" width="1" height="9" role="img" aria-labelledby="info" focusable="false"  fill="currentColor">
-              <title id="info">Поиск</title>
-               <use href="sprite.svg#info"></use>
-             </svg>
-             </div>
-         <div>
-           <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="1"> 
-        </div>
+          
+            <p> 
+               <span class=""><label for="appointment-date">Дети: </label> 
+                 <span class="tooltip">
+                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                     <svg class="information tooltip-icon" width="1" height="9" role="img" aria-labelledby="info" focusable="false"  fill="currentColor">
+                     
+                     <use href="sprite.svg#info"></use></svg>
+                   </button>
+                   <span class="tooltip-text" class="tooltip-text" role="tooltip" >Укажите количество детей, <br>которые будут с вами, возраст <br>которых от 6 до 18 лет. Дети<br>
+                    до 6 лет размещаются<br> бесплатно.
+                   </span>
+                 </span>
+                </span>
+         </div>
+            
+         
+          
+         <div class="number">
+            <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="1"> 
+           <button class="button-minus"><svg class="minus" width="13" height="1" role="img" aria-labelledby="minus" focusable="false"  fill="currentColor">
+            <title id="minus">Минус</title>
+             <use href="sprite.svg#minus"></use>
+           </svg> </button>
+           <button class="button-plus"> <svg class="plus" width="13" height="13" role="img" aria-labelledby="plus" focusable="false"  fill="currentColor">
+            <title id="plus">Плюс</title>
+             <use href="sprite.svg#plus"> </use>
+           </svg>
+          </button>
+          </div> 
+           </p>
+        
       </div>     
       <button class="button-modal" type="submit">Найти</button>
      </form>         
