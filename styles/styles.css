@@ -82,6 +82,7 @@ body {
 
 .navigation-link:not([href]) {
   text-decoration: underline;
+  text-decoration-color: #756257;
   text-underline-offset: 24px;
   text-decoration-thickness: 2px;
 }
@@ -521,6 +522,7 @@ body {
   color: #000000;
   padding-left: 22px;
   margin-bottom: 94px;
+  border: none;
   border-radius: 10px 0 0 10px;
   background: #f2f2f2;
 }
@@ -672,6 +674,179 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
+/*модальное окно*/
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.8);
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+}
+
+.modal-auth {
+  width: 715px;
+}
+
+.modal-close-button {
+  width: 53px;
+  height: 53px;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 54px;
+  right: 70px;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding-left: 68px;
+  padding-top: 62px;
+  background-color: #ffffff;
+  box-shadow: 0px 25px 50px rgb(0 0 0 / 15%);
+  border-radius: 30px;
+}
+
+.modal-title {
+  text-transform: uppercase;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000000;
+  margin: 0;
+  height: 67px;
+}
+
+.button-modal {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  width: 575px;
+  height: 60px;
+  text-transform: uppercase;
+  background: #83b3d3;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  margin-bottom: 70px;
+  margin-top: 40px;
+}
+
+.appointment-form {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700; /*почему жирность не срабатывает?*/
+  font-size: 18px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.appointment-date-adults {
+  width: 155px;
+}
+
+.appointment-date {
+  padding-right: 55px;
+}
+
+.comments {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  color: #333333;
+  margin-top: 0;
+  position: absolute;
+  top: 54px;
+  left: 156px;
+}
+
+.dates,
+.number-of-people {
+  background: #f2f2f2;
+  border-radius: 4px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: #000000;
+  border: none;
+}
+
+.dates {
+  width: 420px;
+  height: 50px;
+  padding-left: 19px;
+  position: relative;
+}
+
+.calendar {
+  top: 30px;
+  position: absolute;
+  right: 91px;
+}
+
+.modal-cross {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.number-of-people {
+  width: 133px;
+  height: 50px;
+  display: flex;
+  text-align: center;
+}
+
+.information {
+  width: 25px;
+  height: 25px;
+  background: #83b3d3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  padding: 0 12px;
+  margin-left: 10px;
+  top: 26px;
+  right: -35px;
+}
+
+.people-young {
+  position: relative;
+}
+
+.people {
+  display: flex;
+  gap: 73px 56px;
+  align-items: center;
+}
+
+.arrival-date {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.modal-container-close {
+  display: none;
+}
+
 /*Каталог*/
 
 .inner-header {
@@ -716,7 +891,7 @@ body {
 
 .hotels-item:focus,
 .hotels-link:focus {
-  outline: 3px solid #83b3d3; /*тут тоже текст прышает, что делать? p s помню про transperent, но не знаю как вставить*/
+  outline: 3px solid #83b3d3;
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -745,11 +920,12 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.control-input[type="checkbox"]:checked {
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
   background-image: url("../images/check_mark.svg"); /*не сработала*/
-  top: 7px;
-  left: 2px;
+  top: 5px;
+  left: 4px;
   width: 12px;
   height: 10px;
   fill: #3f5e72;
@@ -796,10 +972,10 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  margin-bottom: 30px;
-  margin-left: 71px;
+  margin-left: 72px;
   padding: 0px;
-  margin-left: 67px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .catalog-filter-group {
@@ -807,12 +983,15 @@ body {
   padding: 0ch;
   border: none;
   display: flex;
+  position: relative;
 }
 
 .catalog-filter-list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 83px;
 }
 
 .main-catalog {
@@ -829,7 +1008,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 26px;
-  padding: 20px;
 }
 
 .filter-headline {
@@ -844,17 +1022,15 @@ body {
 .range {
   height: 20px;
   position: absolute;
+  top: 77px;
 }
 
 .range-wrapper-inputs {
   border: none;
-  display: flex;
-  justify-content: flex-start;
   width: 287px;
 }
 
 .range-scale {
-  position: relative;
   height: 4px;
   background-color: #333333;
   width: 287px;
@@ -925,6 +1101,9 @@ body {
 
 .button-cost {
   display: grid;
+  grid-template-columns: 160px;
+  grid-template-rows: 48px;
+  gap: 20px;
 }
 
 .range-toggle:focus {
@@ -996,8 +1175,9 @@ body {
   cursor: pointer;
   font-weight: normal;
   text-transform: none;
+  width: 160px;
+  height: 23px;
   margin-left: 81px;
-  margin-top: -43px;
 }
 
 .button-reset:hover {
@@ -1121,6 +1301,7 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 34px;
+  padding: 0 70px;
 }
 
 .product-card-link {

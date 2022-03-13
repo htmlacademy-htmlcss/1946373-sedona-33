@@ -130,36 +130,7 @@
     <div class="finding-info">
       <button class="button-finding">Поиск гостиницы в Седоне</button>
     </div>
-    <!-- добавить в стилях грид
-           <form class="appointment-form" action="#" method="post">
-             <p> <label for="appointment-date">Дата заезда:</label>
-              <input type="text" name="appointment-date" id="appointment-date" value="27 апреля 2020"> </p>
-              <p>Мы не можем отправить вас в прошлое.</p>
-              
-
-           <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
-             <p> <label for="appointment-date">Дата выезда:</label>
-                <input type="text" name="appointment-date" id="appointment-date" value="1 сентября 2021"> </p>
-                <p>На эти даты есть свободные номера. Пока есть.</p>
-                 
-
-           <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
-             <p> <label for="appointment-date">Взрослые:</label>
-                 <input type="text" name="appointment-date" id="appointment-date" placeholder="2"> </p>
-                   
-                
-           <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
-             <p> <label for="appointment-date">Дети: <p>Укажите количество детей, <br>которые будут с вами, возраст <br>которых от 6 до 18 лет. Дети<br>
-               до 6 лет размещаются<br> бесплатно.</p></label>
-               <input type="text" name="appointment-date" id="appointment-date" placeholder="1"> </p>
-         
-                
-           <button class="button" type="submit">Найти</button>
-                  </form>
-              </form>
-           </form>
-          </form> 
-        -->
+    
   </section>
 </main>
 
@@ -214,8 +185,72 @@
           </svg>
       </a>
     </section>
-  
   </footer>
+
+  <!-- Модальное окно-->
+  <div class="modal-container ">
+    <div class="modal modal-auth">
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+      </section>
+      <button class="modal-close-button">
+        <svg class="modal-cross" width="20" height="19" role="img" aria-labelledby="cross" focusable="false"  fill="currentColor">
+          <title id="cross-x">Закрыть</title>
+           <use href="sprite.svg#cross-x"></use>
+       </svg>
+      </button>
+      <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="arrival-date">
+        <p class="appointment-date"> <label for="appointment-date">Дата заезда:</label></p>
+        
+       <div> <input class="dates" type="text" name="appointment-date" id="appointment-date" value="27 апреля 2020">
+         <svg class="calendar" width="15" height="15" role="img" aria-labelledby="calendar" focusable="false"  fill="currentColor">
+          <title id="calendar">календарь</title>
+           <use href="sprite.svg#calendar"></use>
+       </svg></div> <p class="comments">Мы не можем отправить вас в прошлое.</p>
+      </div>
+      
+     
+         
+
+       <div class="arrival-date">
+       <p class="appointment-date"> <label for="appointment-date">Дата выезда:</label></p>
+           <input class="dates" type="text" name="appointment-date" id="appointment-date" value="1 сентября 2021">
+           <svg class="calendar" width="15" height="15" role="img" aria-labelledby="calendar" focusable="false"  fill="currentColor">
+            <title id="calendar">календарь</title>
+             <use href="sprite.svg#calendar"></use>
+         </svg></div> 
+       <p class="comments">На эти даты есть свободные номера. Пока есть.</p>
+   
+    
+       <div class="people">
+         <div class="people-adults">
+            <p> <label for="appointment-date-adults">Взрослые:</label></p>
+              </div>
+              <div>
+            <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="2"> 
+         </div>   
+
+        <div class="people-young">
+            <p> <label for="appointment-date">Дети: <!--<p>Укажите количество детей, <br>которые будут с вами, возраст <br>которых от 6 до 18 лет. Дети<br>
+            до 6 лет размещаются<br> бесплатно.--></p>
+            <svg class="information" width="1" height="9" role="img" aria-labelledby="info" focusable="false"  fill="currentColor">
+              <title id="info">Поиск</title>
+               <use href="sprite.svg#info"></use>
+             </svg>
+             </div>
+         <div>
+           <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="1"> 
+        </div>
+      </div>     
+      <button class="button-modal" type="submit">Найти</button>
+     </form>         
+        
+      
+     
+     
+    </div>
 </div>
 </body>
 </html>
+

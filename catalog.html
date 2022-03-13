@@ -76,7 +76,7 @@
                             <ul class="catalog-filter-list">
                                 <li class="catalog-filter-item">
                                     <label class="control">
-                                        <input class="control-input visually-hidden" type="checkbox" name="swimming-pooll">
+                                        <input class="control-input visually-hidden" type="checkbox" name="swimming-pooll" checked>
                                         <span class="control-mark"></span>
                                         <span class="control-label">Бассейн</span>
                                     </label>
@@ -143,16 +143,16 @@
 
                           
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group">
                 <legend class="filter-headline">Стоимость,<b>₽</b>:</legend>
 
                 <div class="range-wrapper-inputs">
-                    <label class="cost_label"> от
-                        <input class="cost_input min" type="number" value="0" min="0" max="12000" />
-                    </label>
-                    <label class="cost_label"> до
-                        <input class="cost_input max" type="number" value="9000" min="0" max="12000" />
-                    </label>
+                    <label class="cost_label" for="cost-min"> от</label>
+                        <input class="cost_input min" id="cost-min" type="number" value="0" min="0" max="12000" />
+                    
+                    <label class="cost_label" for="cost-max"> до </label>
+                        <input class="cost_input max" id="cost-max" type="number" value="9000" min="0" max="12000" />
+                   
                 </div>
 
                         <div class="range">
@@ -166,43 +166,15 @@
                                 </button>
                               </div>
                             </div>
-            
-
-                            
-                           
-                         
-                       
-            
-                      
-
-                     <!--   <fieldset class="cost">
-                            <legend class="filter-headline">Стоимость,<b>₽</b>:</legend>
-                            <p>
-                                <label class="cost_label"> From
-                                    <input class="cost_input" type="number" value="0" min="0" max="12000" />
-                                </label>
-                                <label class="cost_label"> To
-                                    <input class="cost_input" type="number" value="9000" min="0" max="12000" />
-                                </label>
-                            </p>
-                        <div class="range-scale">
-                            <div class="range-bar" type="button">
-                            <p class="range-slider cost_range" style="--first_val: 0%; --second-val: 75%;">
-                                <input class="range-slider_input" type="range" min="0" max="12000" value="0" step="100"
-                                    aria-label="Min range" />
-                                <input class="range-slider_input" type="range" min="0" max="12000" value="9000"
-                                    step="100" aria-label="Max range" />
-                            </p>
-                        </div> -->
-                    </div>
-                            <div class="button-cost">
-                            <button class="button button-apply button" type="submit" >Применить</button>
-                        <button class="button button-reset" type="reset" href="#">Сбросить</button>
                         </div>
-                    </div>
-                        </fieldset>
-                    </form>
-                </header>
+                        <div class="button-cost">
+                            <button class="button button-apply button" type="submit" >Применить</button>
+                           <button class="button button-reset" type="reset" href="#">Сбросить</button>
+                        </div>
+              </fieldset>
+          </form>
+      </div>
+    </header>
             </div>
 
             <div class="main-catalog">
@@ -230,7 +202,7 @@
                                
                                 <li class="product-card">
                                     <a class="product-card-link" href="product.html">
-                                    <img class="product-card-img" src="../images/hotels/hotel-1.png"
+                                    <img class="product-card-img" src="images/hotels/hotel-1.png"
                                         alt="Amara Resort & Spa"> </a>     
                                         <a class="product-card-link" href="product.html">
                                     <h3 class="product-card-title">Amara Resort & Spa </h3></a> 
@@ -252,7 +224,7 @@
 
                                 <li class="product-card">
                                     <a class="product-card-link" href="product.html">
-                                    <img class="product-card-img" src="../images/hotels/hotel-2.png"
+                                    <img class="product-card-img" src="images/hotels/hotel-2.png"
                                         alt="A Desert Quail Inn"></a>
                                   <a class="product-card-link" href="product.html">
                                     <h3 class="product-card-title">A Desert Quail Inn </h3> </a>
@@ -274,7 +246,7 @@
 
                                 <li class="product-card">
                                     <a class="product-card-link" href="product.html">
-                                    <img class="product-card-img" src="../images/hotels/hotel-3.png"
+                                    <img class="product-card-img" src="images/hotels/hotel-3.png"
                                         alt="Villas at Poco Diablo"></a>
                                   <a class="product-card-link" href="product.html">
                                     <h3 class="product-card-title">Villas at Poco Diablo </h3> </a>
@@ -295,7 +267,7 @@
 
                                 <li class="product-card">
                                     <a class="product-card-link" href="product.html">
-                                    <img class="product-card-img" src="../images/hotels/hotel-1.png"
+                                    <img class="product-card-img" src="images/hotels/hotel-1.png"
                                         alt="GreenTree Inn"></a>
                                    <a class="product-card-link" href="product.html">
                                     <h3 class="product-card-title">GreenTree Inn </h3> </a>
