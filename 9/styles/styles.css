@@ -59,6 +59,18 @@ body {
   counter-reset: feature;
 }
 
+.first-screen:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 57px;
+  background: url("../images/decor-welcome.svg") no-repeat center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
 .navigation {
   display: flex;
   width: 1060px;
@@ -82,6 +94,7 @@ body {
 
 .navigation-link:not([href]) {
   text-decoration: underline;
+  text-decoration-color: #756257;
   text-underline-offset: 24px;
   text-decoration-thickness: 2px;
 }
@@ -239,6 +252,7 @@ body {
 .page-container {
   width: 1200px;
   margin: auto;
+  position: relative;
 }
 
 .city-description {
@@ -521,6 +535,7 @@ body {
   color: #000000;
   padding-left: 22px;
   margin-bottom: 94px;
+  border: none;
   border-radius: 10px 0 0 10px;
   background: #f2f2f2;
 }
@@ -597,6 +612,7 @@ body {
   display: flex;
   gap: 30px;
   align-items: center;
+  width: 107px;
 }
 
 .footer {
@@ -604,24 +620,17 @@ body {
   display: flex;
 }
 
-/*
-.page-footer-container {
-  display: grid;
-  grid-template-columns: 107px 720px 105px;
-  gap: 60px;
-} */
-
-.footer-social-item {
-  width: 107px;
-  margin-right: 61px;
-}
-
-.footer-social-item:active {
+.footer-social:hover {
   background: #68a2ca;
 }
 
-.footer-social-item:focus {
+.footer-social:active {
+  fill: #68a2ca;
+}
+
+.footer-social:focus {
   border: 3px solid #83b3d3;
+  padding: 11px;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -640,11 +649,6 @@ body {
   color: inherit;
   font-style: normal;
 }
-
-/*
-.footer-contacts-address-phone {
-  padding-left: 61px;
-} */
 
 .footer-link {
   color: inherit;
@@ -670,6 +674,316 @@ body {
 
 .subscription-field {
   font-family: "PT Sans", sans-serif;
+}
+
+/*модальное окно*/
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0.8);
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal-auth {
+  width: 715px;
+}
+
+.modal-close-button {
+  width: 53px;
+  height: 53px;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 54px;
+  right: 70px;
+}
+
+.modal-close-button:hover {
+  background: #e6e6e6;
+}
+.modal-close-button:focus {
+  background: #e6e6e6;
+  border: 3px solid #83b3d3;
+}
+.modal-close-button:active {
+  background: #e6e6e6;
+  fill: #0000008a;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding-left: 68px;
+  padding-top: 62px;
+  background-color: #ffffff;
+  box-shadow: 0px 25px 50px rgb(0 0 0 / 15%);
+  border-radius: 30px;
+}
+
+.modal-title {
+  text-transform: uppercase;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  color: #000000;
+  margin: 0;
+  height: 67px;
+}
+
+.button-modal {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  width: 575px;
+  height: 60px;
+  text-transform: uppercase;
+  background: #83b3d3;
+  border-radius: 10px;
+  border: none;
+  color: #ffffff;
+  margin-bottom: 70px;
+  margin-top: 40px;
+}
+
+.button-modal:hover {
+  background: #68A2CA;
+}
+.button-modal:focus {
+  background: #68A2CA;
+  border: 3px solid #756257;
+}
+.button-modal:active {
+  background: #68A2CA;
+  color: #ffffffa4;
+}
+
+.appointment-form {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700; /*почему жирность не срабатывает?*/
+  font-size: 18px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.appointment-date-adults {
+  width: 155px;
+}
+
+.appointment-date {
+  padding-right: 55px;
+}
+
+.comments {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  color: #333333;
+  margin-top: 0;
+  /*position: absolute;
+  top: 54px;
+  left: 156px;*/
+}
+
+.dates,
+.number-of-people {
+  background: #f2f2f2;
+  border-radius: 4px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: #000000;
+  border: none;
+}
+
+.number {
+  position: relative;
+}
+
+.button-minus {
+  position: absolute;
+  top: 14px;
+  background: transparent;
+  border: none;
+  left: 13px;
+}
+
+.button-minus:hover,
+.button-plus:hover {
+ fill: #000000;
+}
+.button-minus:focus,
+.button-plus:focus {
+  fill: #000000;
+  border: 3px solid #83B3D3;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.button-minus:active,
+.button-plus:active {
+  fill: #0000003d;
+}
+
+.button-plus {
+  position: absolute;
+  top: 18px;
+  background: transparent;
+  border: none;
+  right: 13px;
+}
+
+.dates {
+  width: 420px;
+  height: 50px;
+  padding-left: 19px;
+  position: relative;
+}
+
+.dates:hover {
+  background: #e6e6e6;
+}
+
+.dates:focus {
+  background: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.dates:active {
+  background: #FFFFFF;
+border: 2px solid #000000;
+box-sizing: border-box;
+}
+
+.calendar {
+  top: 30px;
+  position: absolute;
+  right: 91px;
+}
+
+.modal-cross {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.number-of-people {
+  width: 133px;
+  height: 50px;
+  display: flex;
+  text-align: center;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #68a2ca;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+  text-transform: none;
+  padding: 18px;
+  padding-top: 15px;
+  padding-left: 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip .tooltiptext {
+  width: 256px;
+  top: 100%;
+  left: 50%;
+  margin-left: -128px;
+}
+
+.tooltip-text:after {
+  /*не отображается стрелка*/
+  content: "";
+  background-image: url("images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+}
+
+.tooltip {
+  position: absolute;
+  margin-top: 7px;
+}
+
+.information {
+  width: 25px;
+  height: 25px;
+  background: #83b3d3;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0 12px;
+  margin-left: 10px;
+}
+
+.people-young {
+  position: relative;
+}
+
+.people {
+  display: flex;
+  gap: 73px 56px;
+  align-items: center;
+}
+
+.arrival-date {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 /*Каталог*/
@@ -705,25 +1019,24 @@ body {
   margin-top: 7px;
 }
 
-.hotels-item:hover {
+.hotels-link:hover {
   /*с этим домиком не получилось, не понимаю причину*/
-  color: #ffffffc5;
+  color: #ffffff88;
 }
 
 .hotels-link:hover {
-  color: #ffffffc5;
+  color: #ffffff88;
 }
 
-.hotels-item:focus,
 .hotels-link:focus {
-  outline: 3px solid #83b3d3; /*тут тоже текст прышает, что делать? p s помню про transperent, но не знаю как вставить*/
+  outline: 3px solid #83b3d3;
   box-sizing: border-box;
+  outline-offset: 4px;
   border-radius: 4px;
 }
 
-.hotels-item:active,
 .hotels-link:active {
-  color: #ffffffa4;
+  color: #ffffff81;
 }
 
 .control {
@@ -745,11 +1058,12 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.control-input[type="checkbox"]:checked {
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
   position: absolute;
   background-image: url("../images/check_mark.svg"); /*не сработала*/
-  top: 7px;
-  left: 2px;
+  top: 5px;
+  left: 4px;
   width: 12px;
   height: 10px;
   fill: #3f5e72;
@@ -796,10 +1110,10 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
-  margin-bottom: 30px;
-  margin-left: 71px;
+  margin-left: 72px;
   padding: 0px;
-  margin-left: 67px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .catalog-filter-group {
@@ -807,12 +1121,15 @@ body {
   padding: 0ch;
   border: none;
   display: flex;
+  position: relative;
 }
 
 .catalog-filter-list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 83px;
 }
 
 .main-catalog {
@@ -829,7 +1146,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 26px;
-  padding: 20px;
+  margin: 20px;
 }
 
 .filter-headline {
@@ -844,17 +1161,15 @@ body {
 .range {
   height: 20px;
   position: absolute;
+  top: 77px;
 }
 
 .range-wrapper-inputs {
   border: none;
-  display: flex;
-  justify-content: flex-start;
   width: 287px;
 }
 
 .range-scale {
-  position: relative;
   height: 4px;
   background-color: #333333;
   width: 287px;
@@ -925,6 +1240,9 @@ body {
 
 .button-cost {
   display: grid;
+  grid-template-columns: 160px;
+  grid-template-rows: 48px;
+  gap: 20px;
 }
 
 .range-toggle:focus {
@@ -996,8 +1314,9 @@ body {
   cursor: pointer;
   font-weight: normal;
   text-transform: none;
+  width: 160px;
+  height: 23px;
   margin-left: 81px;
-  margin-top: -43px;
 }
 
 .button-reset:hover {
@@ -1080,6 +1399,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 48px;
+  margin-top: 44px;
+  margin-bottom: 73px;
 }
 
 .select {
@@ -1117,10 +1439,13 @@ body {
 .product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px 16px;
+  gap: 10px 18px;
   margin: 0;
-  padding: 0;
-  margin-bottom: 34px;
+  padding: 0 72px;
+}
+
+.last-card {
+  margin-bottom: 54px;
 }
 
 .product-card-link {
@@ -1195,7 +1520,12 @@ body {
 }
 
 .product-card-farorite {
+  margin-left: 19px;
   background: #83b3d3;
+}
+
+.price {
+  padding-left: 19px;
 }
 
 .product-card-farorite:focus {
@@ -1251,7 +1581,7 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
-  width: 168px;
+  width: 160px;
   height: 37px;
   display: flex;
   align-items: center;
@@ -1276,6 +1606,16 @@ body {
   margin-right: 290px;
   cursor: pointer;
   margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.wrapper-catalog-button-load-more {
+  width: 1056px;
+  height: 120px;
+  border: 1px solid #e6e6e6;
+  width: 1055px;
+  border-right: white;
+  border-left: white;
 }
 
 .email {
