@@ -110,7 +110,7 @@ body {
 .navigation-link:not([href]) {
   text-decoration: underline;
   -webkit-text-decoration-color: #756257;
-          text-decoration-color: #756257;
+  text-decoration-color: #756257;
   text-underline-offset: 24px;
   text-decoration-thickness: 2px;
 }
@@ -136,7 +136,7 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
   width: 160px;
   margin: 14px 0;
   margin-left: 20px;
@@ -387,7 +387,8 @@ body {
   line-height: 21px;
   width: 400px;
   padding-top: 7px;
-  padding-right: 10px;
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
 .explanation-first {
@@ -437,6 +438,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 .advantage-item-home,
@@ -667,7 +670,7 @@ body {
   place-items: center;
   border: 3px solid transparent;
   border-radius: 10px;
-  color: #83B3D3;
+  color: #83b3d3;
 }
 
 .footer-social-link:hover {
@@ -1348,7 +1351,7 @@ body {
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
 }
 
