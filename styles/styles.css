@@ -1806,6 +1806,19 @@ body {
   height: 48px;
 }
 
+.select:hover {
+  outline: 2px solid #83b3d3;
+}
+
+.select:focus {
+  outline: 2px solid #83b3d3d8;
+}
+
+.select:active {
+  color: #333333;
+  opacity: 0.3;
+}
+
 .subscription-proposal-second {
   text-align: center;
   color: #000000;
