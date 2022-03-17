@@ -1658,11 +1658,13 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   width: 160px;
-  padding-top: 6px;
+  padding-top: 9px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f2f2f2;
+  border-radius: 4px;
 }
 
 .button-more {
