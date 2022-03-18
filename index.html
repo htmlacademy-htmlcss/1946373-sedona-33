@@ -49,7 +49,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <button class="navigation-wants button" type="button" href="#">Хочу сюда!</button>
+            <button class="navigation-wants button" type="button">Хочу сюда!</button>
           </li>
         </ul>
       </nav>
@@ -59,29 +59,31 @@
       <div class="page-container">
         <section class="first-screen">
           <h1 class="visually-hidden">Седона</h1>
-          <div class="logotype"><img class="logo" src="images/welcometosedona.svg" width="458" height="352"
+          <div class="logotype">
+            <img class="logo" src="images/welcometosedona.svg" width="458" height="352"
               alt="Фото Седона»">
-        </section>
-      </div>
-      <section class="city-description">
-        <div class="slogan"><strong>Седона — небольшой городок в Аризоне, <br> 
-          заслуживающий большего!</strong></div>
-        <p class="advantages-description"> Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-      </section>
+         </div>
+       </section>
       
-      <section class="advantage-container">
+       <section class="city-description">
+        <div class="slogan"><strong>Седона — небольшой городок в Аризоне, <br> 
+          заслуживающий большего!</strong>
+        </div>
+        <p class="advantages-description"> Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+       </section>
+      
+       <section class="advantage-container">
         <h2 class="visually-hidden">Преимущества</h2>
         <ol class="advantage-list-container">
           <li class="advantage-item">
             <div class="real-town">
               <h3 class="other-resons ">Настоящий <br> городок</h3>
               <p class="explanation-color-white explanation-number explanation-first">Седона — не аттракцион <br> для туристов, там течёт
-              
                 своя жизнь</p>
             </div>
             <img class="town" src="images/reallytown.jpg" width="800" height="384" alt="Настоящий городок">
           </li>
-          <ul class="advantage-container">
+          <li><ul class="advantage-container">
             <li class="advantage-item-home">
 
               <img src="images/home.svg" width="75" height="72" alt="Жилье">
@@ -105,6 +107,7 @@
             </li>
 
           </ul>
+          </li>
           <li class="advantage-item">
             <img src="images/devil.jpg" width="800" height="384" alt="Мост дьявола">
             <div class="bridge-devil">
@@ -144,6 +147,7 @@
         </div>
 
       </section>
+      </div>
     </main>
 
     <section class="subscription-proposal">
@@ -235,20 +239,20 @@
 
           <div class="people">
             <div class="people-adults">
-              <p> <label for="appointment-date-adults">Взрослые:</label></p>
+                <label for="appointment-date-adults">Взрослые:</label>
             </div>
             <div class="people-young">
-              <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="2">
+              <input class="number-of-people" type="text" name="appointment-date-adults" id="appointment-date-adults" value="2">
               <button class="button-minus modal-action" type="button">
                 <svg class="minus" width="13" height="1" role="img" aria-labelledby="minus"
                   focusable="false" fill="currentColor">
-                  <title id="minus">Минус</title>
+                  <title id="minus-adults">Минус</title>
                   <use href="sprite.svg#minus"></use>
                 </svg> </button>
               <button class="button-plus modal-action" type="button"> 
                 <svg class="plus" width="13" height="13" role="img" aria-labelledby="plus"
                   focusable="false" fill="currentColor">
-                  <title id="plus">Плюс</title>
+                  <title id="plus-adults">Плюс</title>
                   <use href="sprite.svg#plus"> </use>
                 </svg>
               </button>
@@ -258,13 +262,13 @@
             
                 <label for="appointment-date">Дети: </label>
                   <span class="tooltip">
-                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
-                      <svg class="tooltip-icon" width="1" height="9" role="img" aria-labelledby="info"
+                    <button class="tooltip-toggle" type="button" aria-labelledby="appointment-date">
+                      <svg class="tooltip-icon" width="1" height="9" role="img" aria-labelledby="appointment-date"
                         focusable="false" fill="currentColor">
                         <use href="sprite.svg#info"></use>
                       </svg>
                     </button>
-                    <span class="tooltip-text" class="tooltip-text" role="tooltip">Укажите количество детей, которые
+                    <span class="tooltip-text" role="tooltip">Укажите количество детей, которые
                       будут с вами, возраст которых от 6 до 18 лет. Дети
                       до 6 лет размещаются бесплатно.
                     </span>
@@ -274,7 +278,7 @@
 
 
             <div class="number">
-              <input class="number-of-people" type="text" name="appointment-date" id="appointment-date" value="1">
+              <input class="number-of-people" type="text" name="number" id="number" value="1">
               <button class="button-minus modal-action" type="button">
                 <svg class="minus" width="13" height="1" role="img" aria-labelledby="minus"
                   focusable="false" fill="currentColor">
