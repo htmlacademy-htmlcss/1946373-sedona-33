@@ -747,6 +747,12 @@ body {
   display: none;
 }
 
+.modal-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 109px;
+}
+
 .modal-auth {
   width: 715px;
 }
@@ -758,9 +764,11 @@ body {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  position: absolute;
-  top: 54px;
-  right: 70px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-close-button:hover {
@@ -793,7 +801,7 @@ body {
   line-height: 40px;
   color: #000000;
   margin: 0;
-  height: 67px;
+  margin-bottom: 63px;
 }
 
 .button-modal {
@@ -832,6 +840,7 @@ body {
   font-size: 18px;
   line-height: 40px;
   color: #000000;
+  padding-left: 5px;
 }
 
 .appointment-date-adults {
@@ -864,6 +873,8 @@ body {
   line-height: 40px;
   color: #000000;
   border: none;
+  padding-bottom: 7px;
+  padding-left: 22px;
 }
 
 .number {
@@ -915,7 +926,7 @@ body {
   position: relative;
   background-image: url("../images/calendar.svg");
   background-size: 15px;
-  background-position: center right 15px;
+  background-position: center right 20px;
   background-repeat: no-repeat;
 }
 
@@ -938,12 +949,6 @@ body {
   top: 30px;
   position: absolute;
   right: 91px;
-}
-
-.modal-cross {
-  position: absolute;
-  top: 16px;
-  right: 16px;
 }
 
 .number-of-people {
@@ -1035,6 +1040,13 @@ body {
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  margin-bottom: 0;
+  margin-top: 0;
+  row-gap: 8px;
+}
+
+.arrival-date:last-child {
+  align-items: start;
 }
 
 /*Каталог*/
