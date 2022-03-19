@@ -191,6 +191,7 @@ body {
 
 .favorite {
   position: relative;
+  margin-left: 10px;
 }
 
 .favorite-indicator {
@@ -337,6 +338,10 @@ body {
   width: 160px;
   text-decoration: none;
   cursor: pointer;
+}
+
+.navigation-wants {
+  margin-left: 10px;
 }
 
 .navigation-wants,
@@ -662,7 +667,7 @@ body {
 
 .footer-social {
   display: grid;
-  gap: 5px;
+  gap: 9px;
   grid-auto-flow: column;
   grid-auto-columns: 40px;
   grid-auto-rows: 40px;
@@ -686,7 +691,7 @@ body {
 
 .footer-social-link:focus {
   outline: 3px solid #83b3d3;
-  padding: 8px;
+  padding: 6px;
   box-sizing: border-box;
   border-radius: 10px;
 }
@@ -1598,7 +1603,7 @@ body {
 
 .product-card-more:focus {
   background: #615048;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
   border-radius: 4px;
 }
 
@@ -1761,6 +1766,21 @@ body {
 }
 
 .pagination-link:not([href]) {
+  background: #f2f2f2;
+  color: #000000;
+}
+
+.pagination-link:not([href]):hover {
+  background: #f2f2f2;
+  color: #000000;
+}
+
+.pagination-link:not([href]):active {
+  background: #f2f2f2;
+  color: #000000;
+}
+
+.pagination-link:not([href]):focus {
   background: #f2f2f2;
   color: #000000;
 }
