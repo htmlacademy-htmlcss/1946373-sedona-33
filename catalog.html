@@ -59,7 +59,7 @@
           <h1 class="title-header">Гостиницы Седоны</h1>
           <ol class="hotels">
             <li>
-              <a class="hotels-link" href="index.html">
+              <a class="hotels-link" href="index.html" aria-label="На главную">
                 <svg width="12" height="12" aria-labelledby="breadcrumb-home" role="img" aria-hidden="true"
                   focusable="false" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                   <title id="breadcrumb-home">Главная</title>
@@ -92,7 +92,6 @@
                     <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Парковка</span>
-
                   </label>
                 </li>
 
@@ -103,7 +102,6 @@
                     <input class="control-input visually-hidden" type="checkbox" name="wi-fi">
                     <span class="control-mark"></span>
                     <span class="control-label">Wi-Fi</span>
-
                   </label>
                 </li>
               </ul>
@@ -117,7 +115,6 @@
                     <input class="control-input visually-hidden" type="radio" name="product-group" value="hotel" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Гостиница</span>
-
                   </label>
                 </li>
 
@@ -126,7 +123,6 @@
                     <input class="control-input visually-hidden" type="radio" name="product-group" value="hotel">
                     <span class="control-mark"></span>
                     <span class="control-label">Мотель</span>
-
                   </label>
                 </li>
 
@@ -135,17 +131,16 @@
                     <input class="control-input visually-hidden" type="radio" name="product-group" value="hotel">
                     <span class="control-mark"></span>
                     <span class="control-label">Апартаменты</span>
-
                   </label>
                 </li>
               </ul>
             </fieldset>
-          </form>
+          
 
             <!-- Фильтрация -->
 
 
-            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="catalog-filter">
               <fieldset class="cost">
                 <legend class="filter-headline">Стоимость,₽:</legend>
 
@@ -176,8 +171,9 @@
                 <button class="button button-apply button" type="submit">Применить</button>
                 <button class="button button-reset" type="reset">Сбросить</button>
               </div>
-            </form>   
-        </div>
+            </div>   
+       </form>
+      </div>
      </header>
     </div>
 
@@ -194,12 +190,9 @@
         </div>
       </form>
       <div class="sort-buttons">
-        <button class="sort-button-active" type="button"></button>
-        <span class="visually-hidden">все карточки</span>
-        <button class="sort-button-center" type="button"></button>
-        <span class="visually-hidden">по одной карточке</span>
-        <button class="sort-button-right" type="button"></button>
-        <span class="visually-hidden">списком</span>
+        <button class="sort-button-active" type="button" aria-label="Показать по три карточки"></button>
+        <button class="sort-button-center" type="button" aria-label="Показать по одной карточке"></button>
+        <button class="sort-button-right" type="button" aria-label="Показать список"></button>
       </div>
     </div>
     <section class="catalog-products catalog-column">
@@ -208,7 +201,7 @@
 
         <li class="product-card">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-img" src="images/hotels/hotel-1.png" alt="Amara Resort & Spa" width="300px" height="206px"> </a>
+            <img class="product-card-img" src="images/hotels/hotel-1.png" alt="Amara Resort & Spa" width="300" height="206"> </a>
           <a class="product-card-link" href="product.html">
             <h3 class="product-card-title">Amara Resort & Spa </h3>
           </a>
@@ -227,7 +220,7 @@
 
         <li class="product-card">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-img" src="images/hotels/hotel-2.png" alt="A Desert Quail Inn" width="300px" height="206px"></a>
+            <img class="product-card-img" src="images/hotels/hotel-2.png" alt="A Desert Quail Inn" width="300" height="206"></a>
           <a class="product-card-link" href="product.html">
             <h3 class="product-card-title">Desert Quail Inn </h3>
           </a>
@@ -247,7 +240,7 @@
 
         <li class="product-card">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-img" src="images/hotels/hotel-3.png" alt="Villas at Poco Diablo" width="300px" height="206px"></a>
+            <img class="product-card-img" src="images/hotels/hotel-3.png" alt="Villas at Poco Diablo" width="300" height="206"></a>
           <a class="product-card-link" href="product.html">
             <h3 class="product-card-title">Villas at Poco Diablo </h3>
           </a>
@@ -267,7 +260,7 @@
 
         <li class="product-card last-card">
           <a class="product-card-link" href="product.html">
-            <img class="product-card-img" src="images/hotels/hotel-4.png" alt="GreenTree Inn" width="300px" height="206px"></a>
+            <img class="product-card-img" src="images/hotels/hotel-4.png" alt="GreenTree Inn" width="300" height="206"></a>
           <a class="product-card-link" href="product.html">
             <h3 class="product-card-title">GreenTree Inn </h3>
           </a>
@@ -327,7 +320,7 @@
   <section class="subscription-proposal-second">
     <h2 class="subscribe">Подпишитесь на рассылку</h2>
     <p class="subscribe-description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
-    <form class="email-subscription" action="https://google.com" method="post">
+    <form class="email-subscription" action="https://echo.htmlacademy.ru/" method="post">
       <label for="subscription-email" class="visually-hidden"> E-mail</label>
       <input class="subscription-field" placeholder="Ваш e-mail" type="email" name="subscription-email"
         id="subscription-email" required>
