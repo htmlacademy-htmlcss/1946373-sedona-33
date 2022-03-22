@@ -45,7 +45,7 @@
                 <title id="fav-title">Отложенные</title>
                 <use href="sprite.svg#heart"></use>
               </svg>
-              <output class="favorite-indicator">12</output>
+              <output class="favorite-indicator" aria-label="Отложено 12 элеметов">12</output>
             </a>
           </li>
           <li class="navigation-item">
@@ -57,24 +57,23 @@
 
     <main class="main-container index">
       <div class="page-container">
-        <section class="first-screen">
+        <section class="first-screen logotype">
           <h1 class="visually-hidden">Седона</h1>
-          <div class="logotype">
             <img class="logo" src="images/welcometosedona.svg" width="458" height="352"
               alt="Фото Седона»">
-         </div>
        </section>
-      
-       <section class="city-description">
+<section>
+       <div class="city-description">
+         <h2 class="visually-hidden">Преимущества</h2>
         <div class="slogan"><strong>Седона — небольшой городок в Аризоне, <br> 
           заслуживающий большего!</strong>
         </div>
         <p class="advantages-description"> Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
-       </section>
+       </div>
       
-       <section class="advantage-container">
-        <h2 class="visually-hidden">Преимущества</h2>
-        <ol class="advantage-list-container">
+       
+        
+        <ol class="advantage-list-container advantage-container">
           <li class="advantage-item">
             <div class="real-town">
               <h3 class="other-resons ">Настоящий <br> городок</h3>
@@ -229,8 +228,8 @@
           </p>
 
           <p class="arrival-date">
-            <label for="end-date">Дата выезда:</label>
-            <input class="dates" type="text" name="appointment-date" id="end-date" value="1 сентября 2021"
+            <label for="end-date" class="end-date">Дата выезда:</label>
+            <input class="dates dates-end" type="text" name="appointment-date" id="end-date" value="1 сентября 2021"
               aria-describedby="appointment-date-warning">
             <span class="comments" id="end-date-warning">На эти даты есть свободные номера. Пока есть.</span>
           </p>
@@ -262,13 +261,13 @@
             
                 <label for="appointment-date">Дети: </label>
                   <span class="tooltip">
-                    <button class="tooltip-toggle" type="button" aria-labelledby="appointment-date">
-                      <svg class="tooltip-icon" width="1" height="9" role="img" aria-labelledby="appointment-date"
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-text">
+                      <svg class="tooltip-icon" width="1" height="9" role="img" aria-labelledby="tooltip-text"
                         focusable="false" fill="currentColor">
                         <use href="sprite.svg#info"></use>
                       </svg>
                     </button>
-                    <span class="tooltip-text" role="tooltip">Укажите количество детей, которые
+                    <span class="tooltip-text" role="tooltip" id="tooltip-text">Укажите количество детей, которые
                       будут с вами, возраст которых от 6 до 18 лет. Дети
                       до 6 лет размещаются бесплатно.
                     </span>
@@ -278,7 +277,7 @@
 
 
             <div class="number">
-              <input class="number-of-people" type="text" name="number" id="number" value="1">
+              <input class="number-of-people number-of-children" type="text" name="number" id="number" value="1">
               <button class="button-minus modal-action" type="button">
                 <svg class="minus" width="13" height="1" role="img" aria-labelledby="minus"
                   focusable="false" fill="currentColor">
