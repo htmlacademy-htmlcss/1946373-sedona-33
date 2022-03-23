@@ -622,17 +622,19 @@ body {
   min-height: 60px;
   color: #000000;
   padding-left: 19px;
-  border: none;
+  border: 3px solid #f2f2f2;
   border-radius: 10px 0 0 10px;
   background: #f2f2f2;
 }
 
 .subscription-field:hover {
   background: #e6e6e6;
+  border: 3px solid #e6e6e6;
 }
 
 .subscription-field:focus {
   border: 3px solid #83b3d3;
+  background: #e6e6e6;
 }
 
 .subscription-field-invalid {
@@ -799,7 +801,6 @@ body {
 .modal-close-button {
   width: 53px;
   height: 53px;
-  background: #f2f2f2;
   border: none;
   border-radius: 50%;
   cursor: pointer;
